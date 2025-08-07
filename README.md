@@ -43,24 +43,24 @@ The following diagram illustrates the architectural flow of the system:
 
 ```mermaid
 graph TD
-    subgraph User Interfaces
+    subgraph "User Interfaces"
         UI_Text["Text Query UI"] --> B_API
         UI_OCR["OCR Query UI"] --> B_API
         UI_Image["Image Detection UI"] --> B_API
     end
 
-    subgraph Backend API (Flask)
+    subgraph "Backend API (Flask)"
         B_API["Flask App"]
     end
 
-    subgraph Core Services
+    subgraph "Core Services"
         S_Rec["ProductRecommendationService"]
         S_OCR["OCRQueryService"]
         S_CNN["CNNProductDetectionService"]
         S_Scrape["WebScrapingService"]
     end
 
-    subgraph Data Stores
+    subgraph "Data Stores"
         DB_Pinecone["Pinecone Vector DB"]
         DS_Model["CNN Model"]
         DS_CSV["Product CSV"]
