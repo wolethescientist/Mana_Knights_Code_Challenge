@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendation System - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modern-ui.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Product Recommendation System</h1>
+                <p class="page-subtitle">
+                    Discover products through intelligent search, handwritten query processing, and advanced image recognition technology
+                </p>
+            </div>
+
+            <!-- Feature Cards Grid -->
+            <div class="grid grid-cols-3">
+                <!-- Text-Based Product Search -->
+                <div class="card feature-card" onclick="navigateToFeature('/text-search')">
+                    <div class="feature-icon">
+                        🔍
+                    </div>
+                    <h3 class="feature-title">Text-Based Product Search</h3>
+                    <p class="feature-description">
+                        Find products using natural language queries. Simply describe what you're looking for and get intelligent recommendations with detailed product information.
+                    </p>
+                    <button class="btn btn-primary btn-lg btn-full">
+                        Start Text Search
+                    </button>
+                </div>
+
+                <!-- OCR Query Processing -->
+                <div class="card feature-card" onclick="navigateToFeature('/ocr-query')">
+                    <div class="feature-icon">
+                        📝
+                    </div>
+                    <h3 class="feature-title">Handwritten Query Processing</h3>
+                    <p class="feature-description">
+                        Upload images of handwritten queries and let our OCR technology extract and process your text to find matching products automatically.
+                    </p>
+                    <button class="btn btn-primary btn-lg btn-full">
+                        Upload Handwritten Query
+                    </button>
+                </div>
+
+                <!-- Image-Based Product Detection -->
+                <div class="card feature-card" onclick="navigateToFeature('/image-detection')">
+                    <div class="feature-icon">
+                        📷
+                    </div>
+                    <h3 class="feature-title">Image-Based Product Detection</h3>
+                    <p class="feature-description">
+                        Upload product images and use our CNN model to identify products and find similar items in our database with high accuracy.
+                    </p>
+                    <button class="btn btn-primary btn-lg btn-full">
+                        Detect from Image
+                    </button>
+                </div>
+            </div>
+
+            <!-- System Information -->
+            <div class="card mt-4">
+                <h3 class="mb-2">System Features</h3>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <h4 class="mb-1">🤖 AI-Powered Recommendations</h4>
+                        <p class="mb-2">Advanced embedding models for semantic product matching</p>
+                        
+                        <h4 class="mb-1">🔤 OCR Technology</h4>
+                        <p class="mb-2">Handwritten text extraction with preprocessing optimization</p>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">🧠 CNN Product Recognition</h4>
+                        <p class="mb-2">Custom-trained model for accurate product identification</p>
+                        
+                        <h4 class="mb-1">⚡ Real-time Processing</h4>
+                        <p class="mb-2">Fast vector database queries and instant results</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 mt-4">
+                <div class="card text-center">
+                    <div class="feature-icon">
+                        📊
+                    </div>
+                    <h4>Vector Database</h4>
+                    <p>Semantic product matching with high-dimensional embeddings</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="feature-icon">
+                        🎯
+                    </div>
+                    <h4>Smart Filtering</h4>
+                    <p>Intelligent product recommendations based on context</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="feature-icon">
+                        🚀
+                    </div>
+                    <h4>Fast Results</h4>
+                    <p>Optimized processing for quick response times</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function navigateToFeature(url) {
+            window.location.href = url;
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const cards = document.querySelectorAll('.feature-card');
+            let currentIndex = -1;
+            
+            // Find currently focused card
+            cards.forEach((card, index) => {
+                if (card === document.activeElement) {
+                    currentIndex = index;
+                }
+            });
+
+            switch(e.key) {
+                case 'ArrowRight':
+                    e.preventDefault();
+                    currentIndex = (currentIndex + 1) % cards.length;
+                    cards[currentIndex].focus();
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    currentIndex = currentIndex <= 0 ? cards.length - 1 : currentIndex - 1;
+                    cards[currentIndex].focus();
+                    break;
+                case 'Enter':
+                    if (currentIndex >= 0) {
+                        e.preventDefault();
+                        cards[currentIndex].click();
+                    }
+                    break;
+            }
+        });
+
+        // Make cards focusable
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.setAttribute('tabindex', '0');
+            
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Add hover effects with JavaScript for better accessibility
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

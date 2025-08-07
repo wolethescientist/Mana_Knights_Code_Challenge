@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Query Processing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modern-ui.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="container">
+            <!-- Navigation -->
+            <a href="/" class="nav-back">Back to Dashboard</a>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Handwritten Query Processing</h1>
+                <p class="page-subtitle">
+                    Upload images of handwritten queries and let our OCR technology extract and process your text automatically.
+                </p>
+            </div>
+
+            <!-- Upload Form -->
+            <div class="card">
+                <form id="ocrForm">
+                    <div class="form-group">
+                        <label for="imageFile" class="form-label">Upload Handwritten Query Image</label>
+                        <input 
+                            type="file" 
+                            id="imageFile" 
+                            name="image_data" 
+                            class="form-input form-file" 
+                            accept="image/*" 
+                            required
+                        >
+                        <small class="text-muted">Supported formats: JPG, PNG, BMP, TIFF, GIF (Max: 10MB)</small>
+                    </div>
+                    
+
+
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <span class="ocr-icon">📝</span>
+                        Process Handwritten Query
+                    </button>
+                </form>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="card loading hidden">
+                <div class="spinner"></div>
+                Processing handwritten text and searching for products...
+            </div>
+
+            <!-- Error State -->
+            <div id="error" class="alert alert-error hidden"></div>
+
+            <!-- Results Section -->
+            <div id="results" class="hidden">
+                <!-- Extracted Text -->
+                <div class="card">
+                    <h3 class="mb-2">Extracted Text</h3>
+                    <div class="alert alert-success">
+                        <strong>OCR Result:</strong> <span id="extractedText"></span>
+                    </div>
+                    <div id="ocrInfo" class="text-muted"></div>
+                </div>
+
+                <!-- Natural Language Response -->
+                <div class="card">
+                    <h3 class="mb-2">AI Recommendation</h3>
+                    <div id="naturalLanguageResponse" class="text-secondary"></div>
+                </div>
+
+                <!-- Products Table -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3>Recommended Products</h3>
+                        <span id="productCount" class="text-muted"></span>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Stock Code</th>
+                                    <th>Description</th>
+                                    <th>Unit Price (£)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="card">
+                <h3 class="mb-2">Tips for Better OCR Results</h3>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <h4 class="mb-1">📸 Image Quality</h4>
+                        <ul class="text-secondary mb-3" style="padding-left: 1.5rem;">
+                            <li>Use good lighting</li>
+                            <li>Avoid shadows and glare</li>
+                            <li>Keep the image in focus</li>
+                        </ul>
+                        
+                        <h4 class="mb-1">✍️ Handwriting</h4>
+                        <ul class="text-secondary mb-3" style="padding-left: 1.5rem;">
+                            <li>Write clearly and legibly</li>
+                            <li>Use dark ink on light paper</li>
+                            <li>Avoid cursive if possible</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">📐 Positioning</h4>
+                        <ul class="text-secondary mb-3" style="padding-left: 1.5rem;">
+                            <li>Keep text horizontal</li>
+                            <li>Fill the frame with text</li>
+                            <li>Avoid skewed angles</li>
+                        </ul>
+                        
+                        <h4 class="mb-1">🎯 Content</h4>
+                        <ul class="text-secondary mb-3" style="padding-left: 1.5rem;">
+                            <li>Be specific about products</li>
+                            <li>Include key features</li>
+                            <li>Use simple language</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ocrForm = document.getElementById('ocrForm');
+        const imageFileInput = document.getElementById('imageFile');
+
+        const loadingDiv = document.getElementById('loading');
+        const errorDiv = document.getElementById('error');
+        const resultsDiv = document.getElementById('results');
+        const extractedTextSpan = document.getElementById('extractedText');
+        const ocrInfoDiv = document.getElementById('ocrInfo');
+        const naturalLanguageDiv = document.getElementById('naturalLanguageResponse');
+        const productsTableBody = document.getElementById('productsTableBody');
+        const productCountSpan = document.getElementById('productCount');
+
+
+
+        ocrForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const imageFile = imageFileInput.files[0];
+            if (!imageFile) {
+                showError('Please select an image file');
+                return;
+            }
+
+            // Show loading state
+            showLoading();
+
+            try {
+                const formData = new FormData();
+                formData.append('image_data', imageFile);
+
+                const response = await fetch('/ocr-query', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    displayResults(data);
+                } else {
+                    showError(data.error || 'An error occurred while processing the image');
+                }
+            } catch (error) {
+                console.error('OCR processing error:', error);
+                showError('Network error. Please check your connection and try again.');
+            }
+        });
+
+        function showLoading() {
+            loadingDiv.classList.remove('hidden');
+            errorDiv.classList.add('hidden');
+            resultsDiv.classList.add('hidden');
+        }
+
+        function showError(message) {
+            loadingDiv.classList.add('hidden');
+            errorDiv.textContent = message;
+            errorDiv.classList.remove('hidden');
+            resultsDiv.classList.add('hidden');
+        }
+
+        function displayResults(data) {
+            loadingDiv.classList.add('hidden');
+            errorDiv.classList.add('hidden');
+
+            // Display extracted text
+            extractedTextSpan.textContent = data.extracted_text || 'No text could be extracted';
+            
+            // Display OCR confidence info
+            if (data.ocr_confidence !== undefined) {
+                const confidence = (data.ocr_confidence * 100).toFixed(1);
+                ocrInfoDiv.innerHTML = `<strong>OCR Confidence:</strong> ${confidence}%`;
+            }
+
+            // Display natural language response
+            naturalLanguageDiv.textContent = data.response || 'Here are the products I found based on your handwritten query:';
+
+            // Display products in table
+            productsTableBody.innerHTML = '';
+            if (data.products && data.products.length > 0) {
+                data.products.forEach(product => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><strong>${product.stock_code || 'N/A'}</strong></td>
+                        <td>${product.description || 'No description available'}</td>
+                        <td>£${product.unit_price ? parseFloat(product.unit_price).toFixed(2) : 'N/A'}</td>
+                    `;
+                    productsTableBody.appendChild(row);
+                });
+
+                productCountSpan.textContent = `${data.products.length} products found`;
+            } else {
+                const row = document.createElement('tr');
+                row.innerHTML = '<td colspan="3" class="text-center text-muted">No products found for the extracted text</td>';
+                productsTableBody.appendChild(row);
+                productCountSpan.textContent = '0 products found';
+            }
+
+            resultsDiv.classList.remove('hidden');
+        }
+
+        // Drag and drop functionality
+        const dropZone = ocrForm;
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropZone.style.backgroundColor = 'var(--primary-light)';
+            dropZone.style.borderColor = 'var(--primary-color)';
+        }
+
+        function unhighlight(e) {
+            dropZone.style.backgroundColor = '';
+            dropZone.style.borderColor = '';
+        }
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+
+            if (files.length > 0) {
+                imageFileInput.files = files;
+            }
+        }
+    </script>
+</body>
+</html>

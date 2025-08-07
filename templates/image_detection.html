@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-Based Product Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modern-ui.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="container">
+            <!-- Navigation -->
+            <a href="/" class="nav-back">Back to Dashboard</a>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Image-Based Product Detection</h1>
+                <p class="page-subtitle">
+                    Upload product images and use our CNN model to identify products and find similar items in our database.
+                </p>
+            </div>
+
+            <!-- Upload Form -->
+            <div class="card">
+                <form id="imageDetectionForm">
+                    <div class="form-group">
+                        <label for="productImageFile" class="form-label">Upload Product Image</label>
+                        <input 
+                            type="file" 
+                            id="productImageFile" 
+                            name="product_image" 
+                            class="form-input form-file" 
+                            accept="image/*" 
+                            required
+                        >
+                        <small class="text-muted">Supported formats: JPG, PNG, BMP, TIFF, GIF (Max: 10MB)</small>
+                    </div>
+                    
+                    <!-- Image Preview -->
+                    <div id="imagePreview" class="hidden mb-3">
+                        <label class="form-label">Preview:</label>
+                        <img id="previewImg" src="" alt="Preview" style="max-width: 100%; max-height: 300px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <span class="detection-icon">📷</span>
+                        Detect Product & Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="card loading hidden">
+                <div class="spinner"></div>
+                Analyzing image with CNN model and searching for matching products...
+            </div>
+
+            <!-- Error State -->
+            <div id="error" class="alert alert-error hidden"></div>
+
+            <!-- Results Section -->
+            <div id="results" class="hidden">
+                <!-- CNN Predictions -->
+                <div class="card">
+                    <h3 class="mb-2">Product Detection Results</h3>
+                    <div class="alert alert-success">
+                        <strong>Predicted Class:</strong> <span id="predictedClass"></span>
+                    </div>
+                    <div id="cnnInfo" class="mb-3">
+                        <strong>Top 3 Predictions:</strong>
+                        <div id="top3Predictions" class="mt-2"></div>
+                    </div>
+                </div>
+
+                <!-- Natural Language Response -->
+                <div class="card">
+                    <h3 class="mb-2">AI Recommendation</h3>
+                    <div id="naturalLanguageResponse" class="text-secondary"></div>
+                </div>
+
+                <!-- Products Table -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3>Matching Products</h3>
+                        <span id="productCount" class="text-muted"></span>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Stock Code</th>
+                                    <th>Description</th>
+                                    <th>Unit Price (£)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Information -->
+            <div class="card">
+                <h3 class="mb-2">CNN Model Information</h3>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <h4 class="mb-1">🧠 Model Architecture</h4>
+                        <p class="text-secondary mb-3">Custom CNN trained from scratch for product classification</p>
+                        
+                        <h4 class="mb-1">🎯 Accuracy</h4>
+                        <p class="text-secondary mb-3">High-precision product identification with confidence scores</p>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">📊 Training Data</h4>
+                        <p class="text-secondary mb-3">Trained on diverse product categories from scraped images</p>
+                        
+                        <h4 class="mb-1">⚡ Processing</h4>
+                        <p class="text-secondary mb-3">Real-time image analysis and vector database matching</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="card">
+                <h3 class="mb-2">Tips for Better Detection Results</h3>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <h4 class="mb-1">📸 Image Quality</h4>
+                        <ul class="text-secondary mb-3" style="padding-left: 1.5rem;">
+                            <li>Use high-resolution images</li>
+                            <li>Ensure good lighting</li>
+                            <li>Avoid blurry or distorted images</li>
+                        </ul>
+                        
+                        <h4 class="mb-1">🎯 Product Focus</h4>
+                        <ul class="text-secondary mb-3" style="padding-left: 1.5rem;">
+                            <li>Center the product in the frame</li>
+                            <li>Show the product clearly</li>
+                            <li>Avoid cluttered backgrounds</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">📐 Composition</h4>
+                        <ul class="text-secondary mb-3" style="padding-left: 1.5rem;">
+                            <li>Fill the frame with the product</li>
+                            <li>Use neutral backgrounds</li>
+                            <li>Show distinctive features</li>
+                        </ul>
+                        
+                        <h4 class="mb-1">🔍 Best Practices</h4>
+                        <ul class="text-secondary mb-3" style="padding-left: 1.5rem;">
+                            <li>Single product per image</li>
+                            <li>Clear product visibility</li>
+                            <li>Standard viewing angles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const imageDetectionForm = document.getElementById('imageDetectionForm');
+        const productImageFileInput = document.getElementById('productImageFile');
+        const imagePreview = document.getElementById('imagePreview');
+        const previewImg = document.getElementById('previewImg');
+        const loadingDiv = document.getElementById('loading');
+        const errorDiv = document.getElementById('error');
+        const resultsDiv = document.getElementById('results');
+        const predictedClassSpan = document.getElementById('predictedClass');
+        const cnnInfoDiv = document.getElementById('cnnInfo');
+        const top3PredictionsDiv = document.getElementById('top3Predictions');
+        const naturalLanguageDiv = document.getElementById('naturalLanguageResponse');
+        const productsTableBody = document.getElementById('productsTableBody');
+        const productCountSpan = document.getElementById('productCount');
+
+        // Image preview functionality
+        productImageFileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImg.src = e.target.result;
+                    imagePreview.classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.classList.add('hidden');
+            }
+        });
+
+        imageDetectionForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const productImage = productImageFileInput.files[0];
+            if (!productImage) {
+                showError('Please select a product image');
+                return;
+            }
+
+            // Show loading state
+            showLoading();
+
+            try {
+                const formData = new FormData();
+                formData.append('product_image', productImage);
+
+                const response = await fetch('/image-product-search', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    displayResults(data);
+                } else {
+                    showError(data.error || 'An error occurred while processing the image');
+                }
+            } catch (error) {
+                console.error('Image detection error:', error);
+                showError('Network error. Please check your connection and try again.');
+            }
+        });
+
+        function showLoading() {
+            loadingDiv.classList.remove('hidden');
+            errorDiv.classList.add('hidden');
+            resultsDiv.classList.add('hidden');
+        }
+
+        function showError(message) {
+            loadingDiv.classList.add('hidden');
+            errorDiv.textContent = message;
+            errorDiv.classList.remove('hidden');
+            resultsDiv.classList.add('hidden');
+        }
+
+        function displayResults(data) {
+            loadingDiv.classList.add('hidden');
+            errorDiv.classList.add('hidden');
+
+            // Display predicted class
+            predictedClassSpan.textContent = data.predicted_class || 'Unknown';
+
+            // Display top 3 predictions if available
+            if (data.top_3_predictions && data.top_3_predictions.length > 0) {
+                let predictionsHtml = '';
+                data.top_3_predictions.forEach((pred, index) => {
+                    const confidence = (pred.confidence * 100).toFixed(1);
+                    predictionsHtml += `
+                        <div class="flex justify-between items-center mb-1 p-2 bg-gray-50 rounded">
+                            <span><strong>${index + 1}.</strong> ${pred.class}</span>
+                            <span class="text-muted">${confidence}%</span>
+                        </div>
+                    `;
+                });
+                top3PredictionsDiv.innerHTML = predictionsHtml;
+            } else if (data.confidence !== undefined) {
+                const confidence = (data.confidence * 100).toFixed(1);
+                top3PredictionsDiv.innerHTML = `<div class="text-muted">Confidence: ${confidence}%</div>`;
+            }
+
+            // Display natural language response
+            naturalLanguageDiv.textContent = data.response || 'Here are the matching products I found based on the detected product:';
+
+            // Display products in table
+            productsTableBody.innerHTML = '';
+            if (data.products && data.products.length > 0) {
+                data.products.forEach(product => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><strong>${product.stock_code || 'N/A'}</strong></td>
+                        <td>${product.description || 'No description available'}</td>
+                        <td>£${product.unit_price ? parseFloat(product.unit_price).toFixed(2) : 'N/A'}</td>
+                    `;
+                    productsTableBody.appendChild(row);
+                });
+
+                productCountSpan.textContent = `${data.products.length} products found`;
+            } else {
+                const row = document.createElement('tr');
+                row.innerHTML = '<td colspan="3" class="text-center text-muted">No matching products found for the detected class</td>';
+                productsTableBody.appendChild(row);
+                productCountSpan.textContent = '0 products found';
+            }
+
+            resultsDiv.classList.remove('hidden');
+        }
+
+        // Drag and drop functionality
+        const dropZone = imageDetectionForm;
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropZone.style.backgroundColor = 'var(--primary-light)';
+            dropZone.style.borderColor = 'var(--primary-color)';
+        }
+
+        function unhighlight(e) {
+            dropZone.style.backgroundColor = '';
+            dropZone.style.borderColor = '';
+        }
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+
+            if (files.length > 0) {
+                productImageFileInput.files = files;
+                productImageFileInput.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+</body>
+</html>

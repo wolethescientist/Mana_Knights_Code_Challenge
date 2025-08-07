@@ -1,0 +1,963 @@
+stockcode,image,description
+20000,data\scraped_images\candle\candle_001.jpg,candle
+20001,data\scraped_images\candle\candle_002.jpg,candle
+20002,data\scraped_images\candle\candle_003.jpg,candle
+20003,data\scraped_images\candle\candle_004.jpg,candle
+20004,data\scraped_images\candle\candle_005.jpg,candle
+20005,data\scraped_images\candle\candle_006.jpg,candle
+20006,data\scraped_images\candle\candle_007.jpg,candle
+20007,data\scraped_images\candle\candle_008.jpg,candle
+20008,data\scraped_images\candle\candle_009.jpg,candle
+20009,data\scraped_images\candle\candle_010.jpg,candle
+20010,data\scraped_images\candle\candle_011.jpg,candle
+20011,data\scraped_images\candle\candle_012.jpg,candle
+20012,data\scraped_images\candle\candle_013.jpg,candle
+20013,data\scraped_images\candle\candle_014.jpg,candle
+20014,data\scraped_images\candle\candle_015.jpg,candle
+20015,data\scraped_images\candle\candle_016.jpg,candle
+20016,data\scraped_images\candle\candle_017.jpg,candle
+20017,data\scraped_images\candle\candle_018.jpg,candle
+20018,data\scraped_images\candle\candle_019.jpg,candle
+20019,data\scraped_images\candle\candle_020.jpg,candle
+20020,data\scraped_images\candle\candle_021.jpg,candle
+20021,data\scraped_images\candle\candle_022.jpg,candle
+20022,data\scraped_images\candle\candle_023.jpg,candle
+20023,data\scraped_images\candle\candle_024.jpg,candle
+20024,data\scraped_images\candle\candle_025.jpg,candle
+20025,data\scraped_images\candle\candle_026.jpg,candle
+20026,data\scraped_images\candle\candle_027.jpg,candle
+20027,data\scraped_images\candle\candle_028.jpg,candle
+20028,data\scraped_images\candle\candle_029.jpg,candle
+20029,data\scraped_images\candle\candle_030.jpg,candle
+20030,data\scraped_images\candle\candle_031.jpg,candle
+20031,data\scraped_images\candle\candle_032.jpg,candle
+20032,data\scraped_images\candle\candle_033.jpg,candle
+20033,data\scraped_images\candle\candle_034.jpg,candle
+20034,data\scraped_images\candle\candle_035.jpg,candle
+20035,data\scraped_images\candle\candle_036.jpg,candle
+20036,data\scraped_images\candle\candle_037.jpg,candle
+20037,data\scraped_images\candle\candle_038.jpg,candle
+20038,data\scraped_images\candle\candle_039.jpg,candle
+20039,data\scraped_images\candle\candle_040.jpg,candle
+20040,data\scraped_images\candle\candle_041.jpg,candle
+20041,data\scraped_images\candle\candle_042.jpg,candle
+20042,data\scraped_images\candle\candle_043.jpg,candle
+20043,data\scraped_images\candle\candle_044.jpg,candle
+20044,data\scraped_images\candle\candle_045.jpg,candle
+20045,data\scraped_images\candle\candle_046.jpg,candle
+20046,data\scraped_images\candle\candle_047.jpg,candle
+20047,data\scraped_images\candle\candle_048.jpg,candle
+20048,data\scraped_images\candle\candle_049.jpg,candle
+20049,data\scraped_images\candle\candle_050.jpg,candle
+20050,data\scraped_images\candle\candle_051.jpg,candle
+20051,data\scraped_images\candle\candle_052.jpg,candle
+20052,data\scraped_images\candle\candle_053.jpg,candle
+20053,data\scraped_images\candle\candle_054.jpg,candle
+20054,data\scraped_images\candle\candle_055.jpg,candle
+20055,data\scraped_images\candle\candle_056.jpg,candle
+20056,data\scraped_images\candle\candle_057.jpg,candle
+20057,data\scraped_images\candle\candle_058.jpg,candle
+20058,data\scraped_images\candle\candle_059.jpg,candle
+20059,data\scraped_images\candle\candle_060.jpg,candle
+20060,data\scraped_images\candle\candle_061.jpg,candle
+20061,data\scraped_images\candle\candle_062.jpg,candle
+20062,data\scraped_images\candle\candle_063.jpg,candle
+20063,data\scraped_images\candle\candle_064.jpg,candle
+20064,data\scraped_images\candle\candle_065.jpg,candle
+20065,data\scraped_images\candle\candle_066.jpg,candle
+20066,data\scraped_images\candle\candle_067.jpg,candle
+20067,data\scraped_images\candle\candle_068.jpg,candle
+20068,data\scraped_images\candle\candle_069.jpg,candle
+20069,data\scraped_images\candle\candle_070.jpg,candle
+20070,data\scraped_images\candle\candle_071.jpg,candle
+20071,data\scraped_images\candle\candle_072.jpg,candle
+20072,data\scraped_images\heart_decoration\heart_decoration_001.jpg,heart decoration
+20073,data\scraped_images\heart_decoration\heart_decoration_002.jpg,heart decoration
+20074,data\scraped_images\heart_decoration\heart_decoration_003.jpg,heart decoration
+20075,data\scraped_images\heart_decoration\heart_decoration_004.jpg,heart decoration
+20076,data\scraped_images\heart_decoration\heart_decoration_005.jpg,heart decoration
+20077,data\scraped_images\heart_decoration\heart_decoration_006.jpg,heart decoration
+20078,data\scraped_images\heart_decoration\heart_decoration_007.jpg,heart decoration
+20079,data\scraped_images\heart_decoration\heart_decoration_008.jpg,heart decoration
+20080,data\scraped_images\heart_decoration\heart_decoration_009.jpg,heart decoration
+20081,data\scraped_images\heart_decoration\heart_decoration_010.jpg,heart decoration
+20082,data\scraped_images\heart_decoration\heart_decoration_011.jpg,heart decoration
+20083,data\scraped_images\heart_decoration\heart_decoration_012.jpg,heart decoration
+20084,data\scraped_images\heart_decoration\heart_decoration_013.jpg,heart decoration
+20085,data\scraped_images\heart_decoration\heart_decoration_014.jpg,heart decoration
+20086,data\scraped_images\heart_decoration\heart_decoration_015.jpg,heart decoration
+20087,data\scraped_images\heart_decoration\heart_decoration_016.jpg,heart decoration
+20088,data\scraped_images\heart_decoration\heart_decoration_017.jpg,heart decoration
+20089,data\scraped_images\heart_decoration\heart_decoration_018.jpg,heart decoration
+20090,data\scraped_images\heart_decoration\heart_decoration_019.jpg,heart decoration
+20091,data\scraped_images\heart_decoration\heart_decoration_020.jpg,heart decoration
+20092,data\scraped_images\heart_decoration\heart_decoration_021.jpg,heart decoration
+20093,data\scraped_images\heart_decoration\heart_decoration_022.jpg,heart decoration
+20094,data\scraped_images\heart_decoration\heart_decoration_023.jpg,heart decoration
+20095,data\scraped_images\heart_decoration\heart_decoration_024.jpg,heart decoration
+20096,data\scraped_images\heart_decoration\heart_decoration_025.jpg,heart decoration
+20097,data\scraped_images\heart_decoration\heart_decoration_026.jpg,heart decoration
+20098,data\scraped_images\heart_decoration\heart_decoration_027.jpg,heart decoration
+20099,data\scraped_images\heart_decoration\heart_decoration_028.jpg,heart decoration
+20100,data\scraped_images\heart_decoration\heart_decoration_029.jpg,heart decoration
+20101,data\scraped_images\heart_decoration\heart_decoration_030.jpg,heart decoration
+20102,data\scraped_images\heart_decoration\heart_decoration_031.jpg,heart decoration
+20103,data\scraped_images\heart_decoration\heart_decoration_032.jpg,heart decoration
+20104,data\scraped_images\heart_decoration\heart_decoration_033.jpg,heart decoration
+20105,data\scraped_images\heart_decoration\heart_decoration_034.jpg,heart decoration
+20106,data\scraped_images\heart_decoration\heart_decoration_035.jpg,heart decoration
+20107,data\scraped_images\heart_decoration\heart_decoration_036.jpg,heart decoration
+20108,data\scraped_images\heart_decoration\heart_decoration_037.jpg,heart decoration
+20109,data\scraped_images\heart_decoration\heart_decoration_038.jpg,heart decoration
+20110,data\scraped_images\heart_decoration\heart_decoration_039.jpg,heart decoration
+20111,data\scraped_images\heart_decoration\heart_decoration_040.jpg,heart decoration
+20112,data\scraped_images\heart_decoration\heart_decoration_041.jpg,heart decoration
+20113,data\scraped_images\heart_decoration\heart_decoration_042.jpg,heart decoration
+20114,data\scraped_images\heart_decoration\heart_decoration_043.jpg,heart decoration
+20115,data\scraped_images\heart_decoration\heart_decoration_044.jpg,heart decoration
+20116,data\scraped_images\heart_decoration\heart_decoration_045.jpg,heart decoration
+20117,data\scraped_images\heart_decoration\heart_decoration_046.jpg,heart decoration
+20118,data\scraped_images\heart_decoration\heart_decoration_047.jpg,heart decoration
+20119,data\scraped_images\flower\flower_001.jpg,flower
+20120,data\scraped_images\flower\flower_002.jpg,flower
+20121,data\scraped_images\flower\flower_003.jpg,flower
+20122,data\scraped_images\flower\flower_004.jpg,flower
+20123,data\scraped_images\flower\flower_005.jpg,flower
+20124,data\scraped_images\flower\flower_006.jpg,flower
+20125,data\scraped_images\flower\flower_007.jpg,flower
+20126,data\scraped_images\flower\flower_008.jpg,flower
+20127,data\scraped_images\flower\flower_009.jpg,flower
+20128,data\scraped_images\flower\flower_010.jpg,flower
+20129,data\scraped_images\flower\flower_011.jpg,flower
+20130,data\scraped_images\flower\flower_012.jpg,flower
+20131,data\scraped_images\flower\flower_013.jpg,flower
+20132,data\scraped_images\flower\flower_014.jpg,flower
+20133,data\scraped_images\flower\flower_015.jpg,flower
+20134,data\scraped_images\flower\flower_016.jpg,flower
+20135,data\scraped_images\flower\flower_017.jpg,flower
+20136,data\scraped_images\flower\flower_018.jpg,flower
+20137,data\scraped_images\flower\flower_019.jpg,flower
+20138,data\scraped_images\flower\flower_020.jpg,flower
+20139,data\scraped_images\flower\flower_021.jpg,flower
+20140,data\scraped_images\flower\flower_022.jpg,flower
+20141,data\scraped_images\flower\flower_023.jpg,flower
+20142,data\scraped_images\flower\flower_024.jpg,flower
+20143,data\scraped_images\flower\flower_025.jpg,flower
+20144,data\scraped_images\flower\flower_026.jpg,flower
+20145,data\scraped_images\flower\flower_027.jpg,flower
+20146,data\scraped_images\flower\flower_028.jpg,flower
+20147,data\scraped_images\flower\flower_029.jpg,flower
+20148,data\scraped_images\flower\flower_030.jpg,flower
+20149,data\scraped_images\flower\flower_031.jpg,flower
+20150,data\scraped_images\flower\flower_032.jpg,flower
+20151,data\scraped_images\flower\flower_033.jpg,flower
+20152,data\scraped_images\flower\flower_034.jpg,flower
+20153,data\scraped_images\flower\flower_035.jpg,flower
+20154,data\scraped_images\flower\flower_036.jpg,flower
+20155,data\scraped_images\flower\flower_037.jpg,flower
+20156,data\scraped_images\flower\flower_038.jpg,flower
+20157,data\scraped_images\flower\flower_039.jpg,flower
+20158,data\scraped_images\flower\flower_040.jpg,flower
+20159,data\scraped_images\flower\flower_041.jpg,flower
+20160,data\scraped_images\flower\flower_042.jpg,flower
+20161,data\scraped_images\flower\flower_043.jpg,flower
+20162,data\scraped_images\flower\flower_044.jpg,flower
+20163,data\scraped_images\flower\flower_045.jpg,flower
+20164,data\scraped_images\flower\flower_046.jpg,flower
+20165,data\scraped_images\flower\flower_047.jpg,flower
+20166,data\scraped_images\flower\flower_048.jpg,flower
+20167,data\scraped_images\flower\flower_049.jpg,flower
+20168,data\scraped_images\flower\flower_050.jpg,flower
+20169,data\scraped_images\flower\flower_051.jpg,flower
+20170,data\scraped_images\flower\flower_052.jpg,flower
+20171,data\scraped_images\flower\flower_053.jpg,flower
+20172,data\scraped_images\flower\flower_054.jpg,flower
+20173,data\scraped_images\flower\flower_055.jpg,flower
+20174,data\scraped_images\flower\flower_056.jpg,flower
+20175,data\scraped_images\flower\flower_057.jpg,flower
+20176,data\scraped_images\flower\flower_058.jpg,flower
+20177,data\scraped_images\flower\flower_059.jpg,flower
+20178,data\scraped_images\flower\flower_060.jpg,flower
+20179,data\scraped_images\flower\flower_061.jpg,flower
+20180,data\scraped_images\mug\mug_001.jpg,mug
+20181,data\scraped_images\mug\mug_002.jpg,mug
+20182,data\scraped_images\mug\mug_003.jpg,mug
+20183,data\scraped_images\mug\mug_004.jpg,mug
+20184,data\scraped_images\mug\mug_005.jpg,mug
+20185,data\scraped_images\mug\mug_006.jpg,mug
+20186,data\scraped_images\mug\mug_007.jpg,mug
+20187,data\scraped_images\mug\mug_008.jpg,mug
+20188,data\scraped_images\mug\mug_009.jpg,mug
+20189,data\scraped_images\mug\mug_010.jpg,mug
+20190,data\scraped_images\mug\mug_011.jpg,mug
+20191,data\scraped_images\mug\mug_012.jpg,mug
+20192,data\scraped_images\mug\mug_013.jpg,mug
+20193,data\scraped_images\mug\mug_014.jpg,mug
+20194,data\scraped_images\mug\mug_015.jpg,mug
+20195,data\scraped_images\mug\mug_016.jpg,mug
+20196,data\scraped_images\mug\mug_017.jpg,mug
+20197,data\scraped_images\mug\mug_018.jpg,mug
+20198,data\scraped_images\mug\mug_019.jpg,mug
+20199,data\scraped_images\mug\mug_020.jpg,mug
+20200,data\scraped_images\mug\mug_021.jpg,mug
+20201,data\scraped_images\mug\mug_022.jpg,mug
+20202,data\scraped_images\mug\mug_023.jpg,mug
+20203,data\scraped_images\mug\mug_024.jpg,mug
+20204,data\scraped_images\mug\mug_025.jpg,mug
+20205,data\scraped_images\mug\mug_026.jpg,mug
+20206,data\scraped_images\mug\mug_027.jpg,mug
+20207,data\scraped_images\mug\mug_028.jpg,mug
+20208,data\scraped_images\mug\mug_029.jpg,mug
+20209,data\scraped_images\mug\mug_030.jpg,mug
+20210,data\scraped_images\mug\mug_031.jpg,mug
+20211,data\scraped_images\mug\mug_032.jpg,mug
+20212,data\scraped_images\mug\mug_033.jpg,mug
+20213,data\scraped_images\mug\mug_034.jpg,mug
+20214,data\scraped_images\mug\mug_035.jpg,mug
+20215,data\scraped_images\mug\mug_036.jpg,mug
+20216,data\scraped_images\mug\mug_037.jpg,mug
+20217,data\scraped_images\mug\mug_038.jpg,mug
+20218,data\scraped_images\mug\mug_039.jpg,mug
+20219,data\scraped_images\mug\mug_040.jpg,mug
+20220,data\scraped_images\mug\mug_041.jpg,mug
+20221,data\scraped_images\mug\mug_042.jpg,mug
+20222,data\scraped_images\mug\mug_043.jpg,mug
+20223,data\scraped_images\mug\mug_044.jpg,mug
+20224,data\scraped_images\mug\mug_045.jpg,mug
+20225,data\scraped_images\mug\mug_046.jpg,mug
+20226,data\scraped_images\mug\mug_047.jpg,mug
+20227,data\scraped_images\mug\mug_048.jpg,mug
+20228,data\scraped_images\mug\mug_049.jpg,mug
+20229,data\scraped_images\mug\mug_050.jpg,mug
+20230,data\scraped_images\mug\mug_051.jpg,mug
+20231,data\scraped_images\mug\mug_052.jpg,mug
+20232,data\scraped_images\mug\mug_053.jpg,mug
+20233,data\scraped_images\mug\mug_054.jpg,mug
+20234,data\scraped_images\mug\mug_055.jpg,mug
+20235,data\scraped_images\mug\mug_056.jpg,mug
+20236,data\scraped_images\mug\mug_057.jpg,mug
+20237,data\scraped_images\mug\mug_058.jpg,mug
+20238,data\scraped_images\mug\mug_059.jpg,mug
+20239,data\scraped_images\mug\mug_060.jpg,mug
+20240,data\scraped_images\mug\mug_061.jpg,mug
+20241,data\scraped_images\mug\mug_062.jpg,mug
+20242,data\scraped_images\mug\mug_063.jpg,mug
+20243,data\scraped_images\mug\mug_064.jpg,mug
+20244,data\scraped_images\mug\mug_065.jpg,mug
+20245,data\scraped_images\mug\mug_066.jpg,mug
+20246,data\scraped_images\mug\mug_067.jpg,mug
+20247,data\scraped_images\mug\mug_068.jpg,mug
+20248,data\scraped_images\clock\clock_001.jpg,clock
+20249,data\scraped_images\clock\clock_002.jpg,clock
+20250,data\scraped_images\clock\clock_003.jpg,clock
+20251,data\scraped_images\clock\clock_004.jpg,clock
+20252,data\scraped_images\clock\clock_005.jpg,clock
+20253,data\scraped_images\clock\clock_006.jpg,clock
+20254,data\scraped_images\clock\clock_007.jpg,clock
+20255,data\scraped_images\clock\clock_008.jpg,clock
+20256,data\scraped_images\clock\clock_009.jpg,clock
+20257,data\scraped_images\clock\clock_010.jpg,clock
+20258,data\scraped_images\clock\clock_011.jpg,clock
+20259,data\scraped_images\clock\clock_012.jpg,clock
+20260,data\scraped_images\clock\clock_013.jpg,clock
+20261,data\scraped_images\clock\clock_014.jpg,clock
+20262,data\scraped_images\clock\clock_015.jpg,clock
+20263,data\scraped_images\clock\clock_016.jpg,clock
+20264,data\scraped_images\clock\clock_017.jpg,clock
+20265,data\scraped_images\clock\clock_018.jpg,clock
+20266,data\scraped_images\clock\clock_019.jpg,clock
+20267,data\scraped_images\clock\clock_020.jpg,clock
+20268,data\scraped_images\clock\clock_021.jpg,clock
+20269,data\scraped_images\clock\clock_022.jpg,clock
+20270,data\scraped_images\clock\clock_023.jpg,clock
+20271,data\scraped_images\clock\clock_024.jpg,clock
+20272,data\scraped_images\clock\clock_025.jpg,clock
+20273,data\scraped_images\clock\clock_026.jpg,clock
+20274,data\scraped_images\clock\clock_027.jpg,clock
+20275,data\scraped_images\clock\clock_028.jpg,clock
+20276,data\scraped_images\clock\clock_029.jpg,clock
+20277,data\scraped_images\clock\clock_030.jpg,clock
+20278,data\scraped_images\clock\clock_031.jpg,clock
+20279,data\scraped_images\clock\clock_032.jpg,clock
+20280,data\scraped_images\clock\clock_033.jpg,clock
+20281,data\scraped_images\clock\clock_034.jpg,clock
+20282,data\scraped_images\clock\clock_035.jpg,clock
+20283,data\scraped_images\clock\clock_036.jpg,clock
+20284,data\scraped_images\clock\clock_037.jpg,clock
+20285,data\scraped_images\clock\clock_038.jpg,clock
+20286,data\scraped_images\clock\clock_039.jpg,clock
+20287,data\scraped_images\clock\clock_040.jpg,clock
+20288,data\scraped_images\clock\clock_041.jpg,clock
+20289,data\scraped_images\clock\clock_042.jpg,clock
+20290,data\scraped_images\clock\clock_043.jpg,clock
+20291,data\scraped_images\clock\clock_044.jpg,clock
+20292,data\scraped_images\clock\clock_045.jpg,clock
+20293,data\scraped_images\clock\clock_046.jpg,clock
+20294,data\scraped_images\clock\clock_047.jpg,clock
+20295,data\scraped_images\clock\clock_048.jpg,clock
+20296,data\scraped_images\clock\clock_049.jpg,clock
+20297,data\scraped_images\clock\clock_050.jpg,clock
+20298,data\scraped_images\clock\clock_051.jpg,clock
+20299,data\scraped_images\clock\clock_052.jpg,clock
+20300,data\scraped_images\clock\clock_053.jpg,clock
+20301,data\scraped_images\clock\clock_054.jpg,clock
+20302,data\scraped_images\clock\clock_055.jpg,clock
+20303,data\scraped_images\clock\clock_056.jpg,clock
+20304,data\scraped_images\clock\clock_057.jpg,clock
+20305,data\scraped_images\clock\clock_058.jpg,clock
+20306,data\scraped_images\clock\clock_059.jpg,clock
+20307,data\scraped_images\clock\clock_060.jpg,clock
+20308,data\scraped_images\clock\clock_061.jpg,clock
+20309,data\scraped_images\clock\clock_062.jpg,clock
+20310,data\scraped_images\clock\clock_063.jpg,clock
+20311,data\scraped_images\clock\clock_064.jpg,clock
+20312,data\scraped_images\clock\clock_065.jpg,clock
+20313,data\scraped_images\clock\clock_066.jpg,clock
+20314,data\scraped_images\clock\clock_067.jpg,clock
+20315,data\scraped_images\clock\clock_068.jpg,clock
+20316,data\scraped_images\clock\clock_069.jpg,clock
+20317,data\scraped_images\clock\clock_070.jpg,clock
+20318,data\scraped_images\bottle\bottle_001.jpg,bottle
+20319,data\scraped_images\bottle\bottle_002.jpg,bottle
+20320,data\scraped_images\bottle\bottle_003.jpg,bottle
+20321,data\scraped_images\bottle\bottle_004.jpg,bottle
+20322,data\scraped_images\bottle\bottle_005.jpg,bottle
+20323,data\scraped_images\bottle\bottle_006.jpg,bottle
+20324,data\scraped_images\bottle\bottle_007.jpg,bottle
+20325,data\scraped_images\bottle\bottle_008.jpg,bottle
+20326,data\scraped_images\bottle\bottle_009.jpg,bottle
+20327,data\scraped_images\bottle\bottle_010.jpg,bottle
+20328,data\scraped_images\bottle\bottle_011.jpg,bottle
+20329,data\scraped_images\bottle\bottle_012.jpg,bottle
+20330,data\scraped_images\bottle\bottle_013.jpg,bottle
+20331,data\scraped_images\bottle\bottle_014.jpg,bottle
+20332,data\scraped_images\bottle\bottle_015.jpg,bottle
+20333,data\scraped_images\bottle\bottle_016.jpg,bottle
+20334,data\scraped_images\bottle\bottle_017.jpg,bottle
+20335,data\scraped_images\bottle\bottle_018.jpg,bottle
+20336,data\scraped_images\bottle\bottle_019.jpg,bottle
+20337,data\scraped_images\bottle\bottle_020.jpg,bottle
+20338,data\scraped_images\bottle\bottle_021.jpg,bottle
+20339,data\scraped_images\bottle\bottle_022.jpg,bottle
+20340,data\scraped_images\bottle\bottle_023.jpg,bottle
+20341,data\scraped_images\bottle\bottle_024.jpg,bottle
+20342,data\scraped_images\bottle\bottle_025.jpg,bottle
+20343,data\scraped_images\bottle\bottle_026.jpg,bottle
+20344,data\scraped_images\bottle\bottle_027.jpg,bottle
+20345,data\scraped_images\bottle\bottle_028.jpg,bottle
+20346,data\scraped_images\bottle\bottle_029.jpg,bottle
+20347,data\scraped_images\bottle\bottle_030.jpg,bottle
+20348,data\scraped_images\bottle\bottle_031.jpg,bottle
+20349,data\scraped_images\bottle\bottle_032.jpg,bottle
+20350,data\scraped_images\bottle\bottle_033.jpg,bottle
+20351,data\scraped_images\bottle\bottle_034.jpg,bottle
+20352,data\scraped_images\bottle\bottle_035.jpg,bottle
+20353,data\scraped_images\bottle\bottle_036.jpg,bottle
+20354,data\scraped_images\bottle\bottle_037.jpg,bottle
+20355,data\scraped_images\bottle\bottle_038.jpg,bottle
+20356,data\scraped_images\toy\toy_001.jpg,toy
+20357,data\scraped_images\toy\toy_002.jpg,toy
+20358,data\scraped_images\toy\toy_003.jpg,toy
+20359,data\scraped_images\toy\toy_004.jpg,toy
+20360,data\scraped_images\toy\toy_005.jpg,toy
+20361,data\scraped_images\toy\toy_006.jpg,toy
+20362,data\scraped_images\toy\toy_007.jpg,toy
+20363,data\scraped_images\toy\toy_008.jpg,toy
+20364,data\scraped_images\toy\toy_009.jpg,toy
+20365,data\scraped_images\toy\toy_010.jpg,toy
+20366,data\scraped_images\toy\toy_011.jpg,toy
+20367,data\scraped_images\toy\toy_012.jpg,toy
+20368,data\scraped_images\toy\toy_013.jpg,toy
+20369,data\scraped_images\toy\toy_014.jpg,toy
+20370,data\scraped_images\toy\toy_015.jpg,toy
+20371,data\scraped_images\toy\toy_016.jpg,toy
+20372,data\scraped_images\toy\toy_017.jpg,toy
+20373,data\scraped_images\toy\toy_018.jpg,toy
+20374,data\scraped_images\toy\toy_019.jpg,toy
+20375,data\scraped_images\toy\toy_020.jpg,toy
+20376,data\scraped_images\toy\toy_021.jpg,toy
+20377,data\scraped_images\toy\toy_022.jpg,toy
+20378,data\scraped_images\toy\toy_023.jpg,toy
+20379,data\scraped_images\toy\toy_024.jpg,toy
+20380,data\scraped_images\toy\toy_025.jpg,toy
+20381,data\scraped_images\toy\toy_026.jpg,toy
+20382,data\scraped_images\toy\toy_027.jpg,toy
+20383,data\scraped_images\toy\toy_028.jpg,toy
+20384,data\scraped_images\toy\toy_029.jpg,toy
+20385,data\scraped_images\toy\toy_030.jpg,toy
+20386,data\scraped_images\toy\toy_031.jpg,toy
+20387,data\scraped_images\toy\toy_032.jpg,toy
+20388,data\scraped_images\toy\toy_033.jpg,toy
+20389,data\scraped_images\toy\toy_034.jpg,toy
+20390,data\scraped_images\toy\toy_035.jpg,toy
+20391,data\scraped_images\toy\toy_036.jpg,toy
+20392,data\scraped_images\toy\toy_037.jpg,toy
+20393,data\scraped_images\toy\toy_038.jpg,toy
+20394,data\scraped_images\toy\toy_039.jpg,toy
+20395,data\scraped_images\toy\toy_040.jpg,toy
+20396,data\scraped_images\toy\toy_041.jpg,toy
+20397,data\scraped_images\toy\toy_042.jpg,toy
+20398,data\scraped_images\toy\toy_043.jpg,toy
+20399,data\scraped_images\toy\toy_044.jpg,toy
+20400,data\scraped_images\toy\toy_045.jpg,toy
+20401,data\scraped_images\toy\toy_046.jpg,toy
+20402,data\scraped_images\toy\toy_047.jpg,toy
+20403,data\scraped_images\toy\toy_048.jpg,toy
+20404,data\scraped_images\toy\toy_049.jpg,toy
+20405,data\scraped_images\toy\toy_050.jpg,toy
+20406,data\scraped_images\toy\toy_051.jpg,toy
+20407,data\scraped_images\toy\toy_052.jpg,toy
+20408,data\scraped_images\toy\toy_053.jpg,toy
+20409,data\scraped_images\toy\toy_054.jpg,toy
+20410,data\scraped_images\toy\toy_055.jpg,toy
+20411,data\scraped_images\toy\toy_056.jpg,toy
+20412,data\scraped_images\toy\toy_057.jpg,toy
+20413,data\scraped_images\toy\toy_058.jpg,toy
+20414,data\scraped_images\bag\bag_001.jpg,bag
+20415,data\scraped_images\bag\bag_002.jpg,bag
+20416,data\scraped_images\bag\bag_003.jpg,bag
+20417,data\scraped_images\bag\bag_004.jpg,bag
+20418,data\scraped_images\bag\bag_005.jpg,bag
+20419,data\scraped_images\bag\bag_006.jpg,bag
+20420,data\scraped_images\bag\bag_007.jpg,bag
+20421,data\scraped_images\bag\bag_008.jpg,bag
+20422,data\scraped_images\bag\bag_009.jpg,bag
+20423,data\scraped_images\bag\bag_010.jpg,bag
+20424,data\scraped_images\bag\bag_011.jpg,bag
+20425,data\scraped_images\bag\bag_012.jpg,bag
+20426,data\scraped_images\bag\bag_013.jpg,bag
+20427,data\scraped_images\bag\bag_014.jpg,bag
+20428,data\scraped_images\bag\bag_015.jpg,bag
+20429,data\scraped_images\bag\bag_016.jpg,bag
+20430,data\scraped_images\bag\bag_017.jpg,bag
+20431,data\scraped_images\bag\bag_018.jpg,bag
+20432,data\scraped_images\bag\bag_019.jpg,bag
+20433,data\scraped_images\bag\bag_020.jpg,bag
+20434,data\scraped_images\bag\bag_021.jpg,bag
+20435,data\scraped_images\bag\bag_022.jpg,bag
+20436,data\scraped_images\bag\bag_023.jpg,bag
+20437,data\scraped_images\bag\bag_024.jpg,bag
+20438,data\scraped_images\bag\bag_025.jpg,bag
+20439,data\scraped_images\bag\bag_026.jpg,bag
+20440,data\scraped_images\bag\bag_027.jpg,bag
+20441,data\scraped_images\bag\bag_028.jpg,bag
+20442,data\scraped_images\bag\bag_029.jpg,bag
+20443,data\scraped_images\bag\bag_030.jpg,bag
+20444,data\scraped_images\bag\bag_031.jpg,bag
+20445,data\scraped_images\bag\bag_032.jpg,bag
+20446,data\scraped_images\bag\bag_033.jpg,bag
+20447,data\scraped_images\bag\bag_034.jpg,bag
+20448,data\scraped_images\bag\bag_035.jpg,bag
+20449,data\scraped_images\bag\bag_036.jpg,bag
+20450,data\scraped_images\bag\bag_037.jpg,bag
+20451,data\scraped_images\bag\bag_038.jpg,bag
+20452,data\scraped_images\bag\bag_039.jpg,bag
+20453,data\scraped_images\bag\bag_040.jpg,bag
+20454,data\scraped_images\bag\bag_041.jpg,bag
+20455,data\scraped_images\bag\bag_042.jpg,bag
+20456,data\scraped_images\bag\bag_043.jpg,bag
+20457,data\scraped_images\bag\bag_044.jpg,bag
+20458,data\scraped_images\bag\bag_045.jpg,bag
+20459,data\scraped_images\bag\bag_046.jpg,bag
+20460,data\scraped_images\bag\bag_047.jpg,bag
+20461,data\scraped_images\bag\bag_048.jpg,bag
+20462,data\scraped_images\bag\bag_049.jpg,bag
+20463,data\scraped_images\bag\bag_050.jpg,bag
+20464,data\scraped_images\bag\bag_051.jpg,bag
+20465,data\scraped_images\bag\bag_052.jpg,bag
+20466,data\scraped_images\bag\bag_053.jpg,bag
+20467,data\scraped_images\bag\bag_054.jpg,bag
+20468,data\scraped_images\bag\bag_055.jpg,bag
+20469,data\scraped_images\bag\bag_056.jpg,bag
+20470,data\scraped_images\bag\bag_057.jpg,bag
+20471,data\scraped_images\bag\bag_058.jpg,bag
+20472,data\scraped_images\bag\bag_059.jpg,bag
+20473,data\scraped_images\bag\bag_060.jpg,bag
+20474,data\scraped_images\bag\bag_061.jpg,bag
+20475,data\scraped_images\bag\bag_062.jpg,bag
+20476,data\scraped_images\bag\bag_063.jpg,bag
+20477,data\scraped_images\bag\bag_064.jpg,bag
+20478,data\scraped_images\bag\bag_065.jpg,bag
+20479,data\scraped_images\hat\hat_001.jpg,hat
+20480,data\scraped_images\hat\hat_002.jpg,hat
+20481,data\scraped_images\hat\hat_003.jpg,hat
+20482,data\scraped_images\hat\hat_004.jpg,hat
+20483,data\scraped_images\hat\hat_005.jpg,hat
+20484,data\scraped_images\hat\hat_006.jpg,hat
+20485,data\scraped_images\hat\hat_007.jpg,hat
+20486,data\scraped_images\hat\hat_008.jpg,hat
+20487,data\scraped_images\hat\hat_009.jpg,hat
+20488,data\scraped_images\hat\hat_010.jpg,hat
+20489,data\scraped_images\hat\hat_011.jpg,hat
+20490,data\scraped_images\hat\hat_012.jpg,hat
+20491,data\scraped_images\hat\hat_013.jpg,hat
+20492,data\scraped_images\hat\hat_014.jpg,hat
+20493,data\scraped_images\hat\hat_015.jpg,hat
+20494,data\scraped_images\hat\hat_016.jpg,hat
+20495,data\scraped_images\hat\hat_017.jpg,hat
+20496,data\scraped_images\hat\hat_018.jpg,hat
+20497,data\scraped_images\hat\hat_019.jpg,hat
+20498,data\scraped_images\hat\hat_020.jpg,hat
+20499,data\scraped_images\hat\hat_021.jpg,hat
+20500,data\scraped_images\hat\hat_022.jpg,hat
+20501,data\scraped_images\hat\hat_023.jpg,hat
+20502,data\scraped_images\hat\hat_024.jpg,hat
+20503,data\scraped_images\hat\hat_025.jpg,hat
+20504,data\scraped_images\hat\hat_026.jpg,hat
+20505,data\scraped_images\hat\hat_027.jpg,hat
+20506,data\scraped_images\hat\hat_028.jpg,hat
+20507,data\scraped_images\hat\hat_029.jpg,hat
+20508,data\scraped_images\hat\hat_030.jpg,hat
+20509,data\scraped_images\hat\hat_031.jpg,hat
+20510,data\scraped_images\hat\hat_032.jpg,hat
+20511,data\scraped_images\hat\hat_033.jpg,hat
+20512,data\scraped_images\hat\hat_034.jpg,hat
+20513,data\scraped_images\hat\hat_035.jpg,hat
+20514,data\scraped_images\hat\hat_036.jpg,hat
+20515,data\scraped_images\hat\hat_037.jpg,hat
+20516,data\scraped_images\hat\hat_038.jpg,hat
+20517,data\scraped_images\hat\hat_039.jpg,hat
+20518,data\scraped_images\hat\hat_040.jpg,hat
+20519,data\scraped_images\hat\hat_041.jpg,hat
+20520,data\scraped_images\hat\hat_042.jpg,hat
+20521,data\scraped_images\hat\hat_043.jpg,hat
+20522,data\scraped_images\hat\hat_044.jpg,hat
+20523,data\scraped_images\hat\hat_045.jpg,hat
+20524,data\scraped_images\hat\hat_046.jpg,hat
+20525,data\scraped_images\hat\hat_047.jpg,hat
+20526,data\scraped_images\hat\hat_048.jpg,hat
+20527,data\scraped_images\hat\hat_049.jpg,hat
+20528,data\scraped_images\hat\hat_050.jpg,hat
+20529,data\scraped_images\hat\hat_051.jpg,hat
+20530,data\scraped_images\hat\hat_052.jpg,hat
+20531,data\scraped_images\hat\hat_053.jpg,hat
+20532,data\scraped_images\hat\hat_054.jpg,hat
+20533,data\scraped_images\hat\hat_055.jpg,hat
+20534,data\scraped_images\hat\hat_056.jpg,hat
+20535,data\scraped_images\hat\hat_057.jpg,hat
+20536,data\scraped_images\hat\hat_058.jpg,hat
+20537,data\scraped_images\hat\hat_059.jpg,hat
+20538,data\scraped_images\hat\hat_060.jpg,hat
+20539,data\scraped_images\hat\hat_061.jpg,hat
+20540,data\scraped_images\hat\hat_062.jpg,hat
+20541,data\scraped_images\hat\hat_063.jpg,hat
+20542,data\scraped_images\hat\hat_064.jpg,hat
+20543,data\scraped_images\hat\hat_065.jpg,hat
+20544,data\scraped_images\hat\hat_066.jpg,hat
+20545,data\scraped_images\hat\hat_067.jpg,hat
+20546,data\scraped_images\hat\hat_068.jpg,hat
+20547,data\scraped_images\hat\hat_069.jpg,hat
+20548,data\scraped_images\hat\hat_070.jpg,hat
+20549,data\scraped_images\laptop\laptop_001.jpg,laptop
+20550,data\scraped_images\laptop\laptop_002.jpg,laptop
+20551,data\scraped_images\laptop\laptop_003.jpg,laptop
+20552,data\scraped_images\laptop\laptop_004.jpg,laptop
+20553,data\scraped_images\laptop\laptop_005.jpg,laptop
+20554,data\scraped_images\laptop\laptop_006.jpg,laptop
+20555,data\scraped_images\laptop\laptop_007.jpg,laptop
+20556,data\scraped_images\laptop\laptop_008.jpg,laptop
+20557,data\scraped_images\laptop\laptop_009.jpg,laptop
+20558,data\scraped_images\laptop\laptop_010.jpg,laptop
+20559,data\scraped_images\laptop\laptop_011.jpg,laptop
+20560,data\scraped_images\laptop\laptop_012.jpg,laptop
+20561,data\scraped_images\laptop\laptop_013.jpg,laptop
+20562,data\scraped_images\laptop\laptop_014.jpg,laptop
+20563,data\scraped_images\laptop\laptop_015.jpg,laptop
+20564,data\scraped_images\laptop\laptop_016.jpg,laptop
+20565,data\scraped_images\laptop\laptop_017.jpg,laptop
+20566,data\scraped_images\laptop\laptop_018.jpg,laptop
+20567,data\scraped_images\laptop\laptop_019.jpg,laptop
+20568,data\scraped_images\laptop\laptop_020.jpg,laptop
+20569,data\scraped_images\laptop\laptop_021.jpg,laptop
+20570,data\scraped_images\laptop\laptop_022.jpg,laptop
+20571,data\scraped_images\laptop\laptop_023.jpg,laptop
+20572,data\scraped_images\laptop\laptop_024.jpg,laptop
+20573,data\scraped_images\laptop\laptop_025.jpg,laptop
+20574,data\scraped_images\smartphone\smartphone_001.jpg,smartphone
+20575,data\scraped_images\smartphone\smartphone_002.jpg,smartphone
+20576,data\scraped_images\smartphone\smartphone_003.jpg,smartphone
+20577,data\scraped_images\smartphone\smartphone_004.jpg,smartphone
+20578,data\scraped_images\smartphone\smartphone_005.jpg,smartphone
+20579,data\scraped_images\smartphone\smartphone_006.jpg,smartphone
+20580,data\scraped_images\smartphone\smartphone_007.jpg,smartphone
+20581,data\scraped_images\smartphone\smartphone_008.jpg,smartphone
+20582,data\scraped_images\smartphone\smartphone_009.jpg,smartphone
+20583,data\scraped_images\smartphone\smartphone_010.jpg,smartphone
+20584,data\scraped_images\smartphone\smartphone_011.jpg,smartphone
+20585,data\scraped_images\smartphone\smartphone_012.jpg,smartphone
+20586,data\scraped_images\smartphone\smartphone_013.jpg,smartphone
+20587,data\scraped_images\smartphone\smartphone_014.jpg,smartphone
+20588,data\scraped_images\smartphone\smartphone_015.jpg,smartphone
+20589,data\scraped_images\smartphone\smartphone_016.jpg,smartphone
+20590,data\scraped_images\smartphone\smartphone_017.jpg,smartphone
+20591,data\scraped_images\smartphone\smartphone_018.jpg,smartphone
+20592,data\scraped_images\smartphone\smartphone_019.jpg,smartphone
+20593,data\scraped_images\smartphone\smartphone_020.jpg,smartphone
+20594,data\scraped_images\smartphone\smartphone_021.jpg,smartphone
+20595,data\scraped_images\smartphone\smartphone_022.jpg,smartphone
+20596,data\scraped_images\smartphone\smartphone_023.jpg,smartphone
+20597,data\scraped_images\smartphone\smartphone_024.jpg,smartphone
+20598,data\scraped_images\smartphone\smartphone_025.jpg,smartphone
+20599,data\scraped_images\smartphone\smartphone_026.jpg,smartphone
+20600,data\scraped_images\headphones\headphones_001.jpg,headphones
+20601,data\scraped_images\headphones\headphones_002.jpg,headphones
+20602,data\scraped_images\headphones\headphones_003.jpg,headphones
+20603,data\scraped_images\headphones\headphones_004.jpg,headphones
+20604,data\scraped_images\headphones\headphones_005.jpg,headphones
+20605,data\scraped_images\headphones\headphones_006.jpg,headphones
+20606,data\scraped_images\headphones\headphones_007.jpg,headphones
+20607,data\scraped_images\headphones\headphones_008.jpg,headphones
+20608,data\scraped_images\headphones\headphones_009.jpg,headphones
+20609,data\scraped_images\headphones\headphones_010.jpg,headphones
+20610,data\scraped_images\headphones\headphones_011.jpg,headphones
+20611,data\scraped_images\headphones\headphones_012.jpg,headphones
+20612,data\scraped_images\headphones\headphones_013.jpg,headphones
+20613,data\scraped_images\headphones\headphones_014.jpg,headphones
+20614,data\scraped_images\headphones\headphones_015.jpg,headphones
+20615,data\scraped_images\headphones\headphones_016.jpg,headphones
+20616,data\scraped_images\headphones\headphones_017.jpg,headphones
+20617,data\scraped_images\headphones\headphones_018.jpg,headphones
+20618,data\scraped_images\headphones\headphones_019.jpg,headphones
+20619,data\scraped_images\headphones\headphones_020.jpg,headphones
+20620,data\scraped_images\headphones\headphones_021.jpg,headphones
+20621,data\scraped_images\headphones\headphones_022.jpg,headphones
+20622,data\scraped_images\headphones\headphones_023.jpg,headphones
+20623,data\scraped_images\headphones\headphones_024.jpg,headphones
+20624,data\scraped_images\headphones\headphones_025.jpg,headphones
+20625,data\scraped_images\headphones\headphones_026.jpg,headphones
+20626,data\scraped_images\headphones\headphones_027.jpg,headphones
+20627,data\scraped_images\headphones\headphones_028.jpg,headphones
+20628,data\scraped_images\headphones\headphones_029.jpg,headphones
+20629,data\scraped_images\headphones\headphones_030.jpg,headphones
+20630,data\scraped_images\headphones\headphones_031.jpg,headphones
+20631,data\scraped_images\headphones\headphones_032.jpg,headphones
+20632,data\scraped_images\headphones\headphones_033.jpg,headphones
+20633,data\scraped_images\headphones\headphones_034.jpg,headphones
+20634,data\scraped_images\camera\camera_001.jpg,camera
+20635,data\scraped_images\camera\camera_002.jpg,camera
+20636,data\scraped_images\camera\camera_003.jpg,camera
+20637,data\scraped_images\camera\camera_004.jpg,camera
+20638,data\scraped_images\camera\camera_005.jpg,camera
+20639,data\scraped_images\camera\camera_006.jpg,camera
+20640,data\scraped_images\camera\camera_007.jpg,camera
+20641,data\scraped_images\camera\camera_008.jpg,camera
+20642,data\scraped_images\camera\camera_009.jpg,camera
+20643,data\scraped_images\camera\camera_010.jpg,camera
+20644,data\scraped_images\camera\camera_011.jpg,camera
+20645,data\scraped_images\camera\camera_012.jpg,camera
+20646,data\scraped_images\camera\camera_013.jpg,camera
+20647,data\scraped_images\camera\camera_014.jpg,camera
+20648,data\scraped_images\camera\camera_015.jpg,camera
+20649,data\scraped_images\camera\camera_016.jpg,camera
+20650,data\scraped_images\camera\camera_017.jpg,camera
+20651,data\scraped_images\camera\camera_018.jpg,camera
+20652,data\scraped_images\camera\camera_019.jpg,camera
+20653,data\scraped_images\camera\camera_020.jpg,camera
+20654,data\scraped_images\coffee_maker\coffee_maker_001.jpg,coffee maker
+20655,data\scraped_images\coffee_maker\coffee_maker_002.jpg,coffee maker
+20656,data\scraped_images\coffee_maker\coffee_maker_003.jpg,coffee maker
+20657,data\scraped_images\coffee_maker\coffee_maker_004.jpg,coffee maker
+20658,data\scraped_images\coffee_maker\coffee_maker_005.jpg,coffee maker
+20659,data\scraped_images\coffee_maker\coffee_maker_006.jpg,coffee maker
+20660,data\scraped_images\coffee_maker\coffee_maker_007.jpg,coffee maker
+20661,data\scraped_images\coffee_maker\coffee_maker_008.jpg,coffee maker
+20662,data\scraped_images\coffee_maker\coffee_maker_009.jpg,coffee maker
+20663,data\scraped_images\coffee_maker\coffee_maker_010.jpg,coffee maker
+20664,data\scraped_images\coffee_maker\coffee_maker_011.jpg,coffee maker
+20665,data\scraped_images\coffee_maker\coffee_maker_012.jpg,coffee maker
+20666,data\scraped_images\coffee_maker\coffee_maker_013.jpg,coffee maker
+20667,data\scraped_images\coffee_maker\coffee_maker_014.jpg,coffee maker
+20668,data\scraped_images\coffee_maker\coffee_maker_015.jpg,coffee maker
+20669,data\scraped_images\coffee_maker\coffee_maker_016.jpg,coffee maker
+20670,data\scraped_images\coffee_maker\coffee_maker_017.jpg,coffee maker
+20671,data\scraped_images\coffee_maker\coffee_maker_018.jpg,coffee maker
+20672,data\scraped_images\coffee_maker\coffee_maker_019.jpg,coffee maker
+20673,data\scraped_images\coffee_maker\coffee_maker_020.jpg,coffee maker
+20674,data\scraped_images\coffee_maker\coffee_maker_021.jpg,coffee maker
+20675,data\scraped_images\coffee_maker\coffee_maker_022.jpg,coffee maker
+20676,data\scraped_images\coffee_maker\coffee_maker_023.jpg,coffee maker
+20677,data\scraped_images\coffee_maker\coffee_maker_024.jpg,coffee maker
+20678,data\scraped_images\coffee_maker\coffee_maker_025.jpg,coffee maker
+20679,data\scraped_images\coffee_maker\coffee_maker_026.jpg,coffee maker
+20680,data\scraped_images\coffee_maker\coffee_maker_027.jpg,coffee maker
+20681,data\scraped_images\coffee_maker\coffee_maker_028.jpg,coffee maker
+20682,data\scraped_images\coffee_maker\coffee_maker_029.jpg,coffee maker
+20683,data\scraped_images\coffee_maker\coffee_maker_030.jpg,coffee maker
+20684,data\scraped_images\coffee_maker\coffee_maker_031.jpg,coffee maker
+20685,data\scraped_images\coffee_maker\coffee_maker_032.jpg,coffee maker
+20686,data\scraped_images\coffee_maker\coffee_maker_033.jpg,coffee maker
+20687,data\scraped_images\coffee_maker\coffee_maker_034.jpg,coffee maker
+20688,data\scraped_images\coffee_maker\coffee_maker_035.jpg,coffee maker
+20689,data\scraped_images\coffee_maker\coffee_maker_036.jpg,coffee maker
+20690,data\scraped_images\coffee_maker\coffee_maker_037.jpg,coffee maker
+20691,data\scraped_images\coffee_maker\coffee_maker_038.jpg,coffee maker
+20692,data\scraped_images\coffee_maker\coffee_maker_039.jpg,coffee maker
+20693,data\scraped_images\coffee_maker\coffee_maker_040.jpg,coffee maker
+20694,data\scraped_images\coffee_maker\coffee_maker_041.jpg,coffee maker
+20695,data\scraped_images\coffee_maker\coffee_maker_042.jpg,coffee maker
+20696,data\scraped_images\coffee_maker\coffee_maker_043.jpg,coffee maker
+20697,data\scraped_images\coffee_maker\coffee_maker_044.jpg,coffee maker
+20698,data\scraped_images\coffee_maker\coffee_maker_045.jpg,coffee maker
+20699,data\scraped_images\coffee_maker\coffee_maker_046.jpg,coffee maker
+20700,data\scraped_images\coffee_maker\coffee_maker_047.jpg,coffee maker
+20701,data\scraped_images\coffee_maker\coffee_maker_048.jpg,coffee maker
+20702,data\scraped_images\coffee_maker\coffee_maker_049.jpg,coffee maker
+20703,data\scraped_images\coffee_maker\coffee_maker_050.jpg,coffee maker
+20704,data\scraped_images\coffee_maker\coffee_maker_051.jpg,coffee maker
+20705,data\scraped_images\coffee_maker\coffee_maker_052.jpg,coffee maker
+20706,data\scraped_images\coffee_maker\coffee_maker_053.jpg,coffee maker
+20707,data\scraped_images\coffee_maker\coffee_maker_054.jpg,coffee maker
+20708,data\scraped_images\coffee_maker\coffee_maker_055.jpg,coffee maker
+20709,data\scraped_images\coffee_maker\coffee_maker_056.jpg,coffee maker
+20710,data\scraped_images\coffee_maker\coffee_maker_057.jpg,coffee maker
+20711,data\scraped_images\coffee_maker\coffee_maker_058.jpg,coffee maker
+20712,data\scraped_images\blender\blender_001.jpg,blender
+20713,data\scraped_images\blender\blender_002.jpg,blender
+20714,data\scraped_images\blender\blender_003.jpg,blender
+20715,data\scraped_images\blender\blender_004.jpg,blender
+20716,data\scraped_images\blender\blender_005.jpg,blender
+20717,data\scraped_images\blender\blender_006.jpg,blender
+20718,data\scraped_images\blender\blender_007.jpg,blender
+20719,data\scraped_images\blender\blender_008.jpg,blender
+20720,data\scraped_images\blender\blender_009.jpg,blender
+20721,data\scraped_images\blender\blender_010.jpg,blender
+20722,data\scraped_images\blender\blender_011.jpg,blender
+20723,data\scraped_images\blender\blender_012.jpg,blender
+20724,data\scraped_images\blender\blender_013.jpg,blender
+20725,data\scraped_images\blender\blender_014.jpg,blender
+20726,data\scraped_images\blender\blender_015.jpg,blender
+20727,data\scraped_images\blender\blender_016.jpg,blender
+20728,data\scraped_images\blender\blender_017.jpg,blender
+20729,data\scraped_images\blender\blender_018.jpg,blender
+20730,data\scraped_images\blender\blender_019.jpg,blender
+20731,data\scraped_images\blender\blender_020.jpg,blender
+20732,data\scraped_images\blender\blender_021.jpg,blender
+20733,data\scraped_images\blender\blender_022.jpg,blender
+20734,data\scraped_images\blender\blender_023.jpg,blender
+20735,data\scraped_images\blender\blender_024.jpg,blender
+20736,data\scraped_images\blender\blender_025.jpg,blender
+20737,data\scraped_images\blender\blender_026.jpg,blender
+20738,data\scraped_images\blender\blender_027.jpg,blender
+20739,data\scraped_images\blender\blender_028.jpg,blender
+20740,data\scraped_images\blender\blender_029.jpg,blender
+20741,data\scraped_images\microwave\microwave_001.jpg,microwave
+20742,data\scraped_images\microwave\microwave_002.jpg,microwave
+20743,data\scraped_images\microwave\microwave_003.jpg,microwave
+20744,data\scraped_images\microwave\microwave_004.jpg,microwave
+20745,data\scraped_images\microwave\microwave_005.jpg,microwave
+20746,data\scraped_images\microwave\microwave_006.jpg,microwave
+20747,data\scraped_images\microwave\microwave_007.jpg,microwave
+20748,data\scraped_images\microwave\microwave_008.jpg,microwave
+20749,data\scraped_images\microwave\microwave_009.jpg,microwave
+20750,data\scraped_images\microwave\microwave_010.jpg,microwave
+20751,data\scraped_images\microwave\microwave_011.jpg,microwave
+20752,data\scraped_images\microwave\microwave_012.jpg,microwave
+20753,data\scraped_images\microwave\microwave_013.jpg,microwave
+20754,data\scraped_images\microwave\microwave_014.jpg,microwave
+20755,data\scraped_images\microwave\microwave_015.jpg,microwave
+20756,data\scraped_images\microwave\microwave_016.jpg,microwave
+20757,data\scraped_images\yoga_mat\yoga_mat_001.jpg,yoga mat
+20758,data\scraped_images\yoga_mat\yoga_mat_002.jpg,yoga mat
+20759,data\scraped_images\yoga_mat\yoga_mat_003.jpg,yoga mat
+20760,data\scraped_images\yoga_mat\yoga_mat_004.jpg,yoga mat
+20761,data\scraped_images\yoga_mat\yoga_mat_005.jpg,yoga mat
+20762,data\scraped_images\yoga_mat\yoga_mat_006.jpg,yoga mat
+20763,data\scraped_images\yoga_mat\yoga_mat_007.jpg,yoga mat
+20764,data\scraped_images\yoga_mat\yoga_mat_008.jpg,yoga mat
+20765,data\scraped_images\yoga_mat\yoga_mat_009.jpg,yoga mat
+20766,data\scraped_images\yoga_mat\yoga_mat_010.jpg,yoga mat
+20767,data\scraped_images\yoga_mat\yoga_mat_011.jpg,yoga mat
+20768,data\scraped_images\yoga_mat\yoga_mat_012.jpg,yoga mat
+20769,data\scraped_images\yoga_mat\yoga_mat_013.jpg,yoga mat
+20770,data\scraped_images\yoga_mat\yoga_mat_014.jpg,yoga mat
+20771,data\scraped_images\yoga_mat\yoga_mat_015.jpg,yoga mat
+20772,data\scraped_images\yoga_mat\yoga_mat_016.jpg,yoga mat
+20773,data\scraped_images\yoga_mat\yoga_mat_017.jpg,yoga mat
+20774,data\scraped_images\yoga_mat\yoga_mat_018.jpg,yoga mat
+20775,data\scraped_images\yoga_mat\yoga_mat_019.jpg,yoga mat
+20776,data\scraped_images\yoga_mat\yoga_mat_020.jpg,yoga mat
+20777,data\scraped_images\yoga_mat\yoga_mat_021.jpg,yoga mat
+20778,data\scraped_images\yoga_mat\yoga_mat_022.jpg,yoga mat
+20779,data\scraped_images\yoga_mat\yoga_mat_023.jpg,yoga mat
+20780,data\scraped_images\yoga_mat\yoga_mat_024.jpg,yoga mat
+20781,data\scraped_images\yoga_mat\yoga_mat_025.jpg,yoga mat
+20782,data\scraped_images\yoga_mat\yoga_mat_026.jpg,yoga mat
+20783,data\scraped_images\yoga_mat\yoga_mat_027.jpg,yoga mat
+20784,data\scraped_images\yoga_mat\yoga_mat_028.jpg,yoga mat
+20785,data\scraped_images\yoga_mat\yoga_mat_029.jpg,yoga mat
+20786,data\scraped_images\yoga_mat\yoga_mat_030.jpg,yoga mat
+20787,data\scraped_images\yoga_mat\yoga_mat_031.jpg,yoga mat
+20788,data\scraped_images\yoga_mat\yoga_mat_032.jpg,yoga mat
+20789,data\scraped_images\yoga_mat\yoga_mat_033.jpg,yoga mat
+20790,data\scraped_images\yoga_mat\yoga_mat_034.jpg,yoga mat
+20791,data\scraped_images\yoga_mat\yoga_mat_035.jpg,yoga mat
+20792,data\scraped_images\yoga_mat\yoga_mat_036.jpg,yoga mat
+20793,data\scraped_images\yoga_mat\yoga_mat_037.jpg,yoga mat
+20794,data\scraped_images\yoga_mat\yoga_mat_038.jpg,yoga mat
+20795,data\scraped_images\yoga_mat\yoga_mat_039.jpg,yoga mat
+20796,data\scraped_images\yoga_mat\yoga_mat_040.jpg,yoga mat
+20797,data\scraped_images\yoga_mat\yoga_mat_041.jpg,yoga mat
+20798,data\scraped_images\yoga_mat\yoga_mat_042.jpg,yoga mat
+20799,data\scraped_images\yoga_mat\yoga_mat_043.jpg,yoga mat
+20800,data\scraped_images\yoga_mat\yoga_mat_044.jpg,yoga mat
+20801,data\scraped_images\yoga_mat\yoga_mat_045.jpg,yoga mat
+20802,data\scraped_images\yoga_mat\yoga_mat_046.jpg,yoga mat
+20803,data\scraped_images\yoga_mat\yoga_mat_047.jpg,yoga mat
+20804,data\scraped_images\yoga_mat\yoga_mat_048.jpg,yoga mat
+20805,data\scraped_images\yoga_mat\yoga_mat_049.jpg,yoga mat
+20806,data\scraped_images\yoga_mat\yoga_mat_050.jpg,yoga mat
+20807,data\scraped_images\yoga_mat\yoga_mat_051.jpg,yoga mat
+20808,data\scraped_images\yoga_mat\yoga_mat_052.jpg,yoga mat
+20809,data\scraped_images\yoga_mat\yoga_mat_053.jpg,yoga mat
+20810,data\scraped_images\yoga_mat\yoga_mat_054.jpg,yoga mat
+20811,data\scraped_images\yoga_mat\yoga_mat_055.jpg,yoga mat
+20812,data\scraped_images\yoga_mat\yoga_mat_056.jpg,yoga mat
+20813,data\scraped_images\yoga_mat\yoga_mat_057.jpg,yoga mat
+20814,data\scraped_images\yoga_mat\yoga_mat_058.jpg,yoga mat
+20815,data\scraped_images\yoga_mat\yoga_mat_059.jpg,yoga mat
+20816,data\scraped_images\yoga_mat\yoga_mat_060.jpg,yoga mat
+20817,data\scraped_images\yoga_mat\yoga_mat_061.jpg,yoga mat
+20818,data\scraped_images\yoga_mat\yoga_mat_062.jpg,yoga mat
+20819,data\scraped_images\yoga_mat\yoga_mat_063.jpg,yoga mat
+20820,data\scraped_images\yoga_mat\yoga_mat_064.jpg,yoga mat
+20821,data\scraped_images\yoga_mat\yoga_mat_065.jpg,yoga mat
+20822,data\scraped_images\yoga_mat\yoga_mat_066.jpg,yoga mat
+20823,data\scraped_images\yoga_mat\yoga_mat_067.jpg,yoga mat
+20824,data\scraped_images\yoga_mat\yoga_mat_068.jpg,yoga mat
+20825,data\scraped_images\yoga_mat\yoga_mat_069.jpg,yoga mat
+20826,data\scraped_images\yoga_mat\yoga_mat_070.jpg,yoga mat
+20827,data\scraped_images\yoga_mat\yoga_mat_071.jpg,yoga mat
+20828,data\scraped_images\yoga_mat\yoga_mat_072.jpg,yoga mat
+20829,data\scraped_images\dumbbells\dumbbells_001.jpg,dumbbells
+20830,data\scraped_images\dumbbells\dumbbells_002.jpg,dumbbells
+20831,data\scraped_images\dumbbells\dumbbells_003.jpg,dumbbells
+20832,data\scraped_images\dumbbells\dumbbells_004.jpg,dumbbells
+20833,data\scraped_images\dumbbells\dumbbells_005.jpg,dumbbells
+20834,data\scraped_images\dumbbells\dumbbells_006.jpg,dumbbells
+20835,data\scraped_images\dumbbells\dumbbells_007.jpg,dumbbells
+20836,data\scraped_images\dumbbells\dumbbells_008.jpg,dumbbells
+20837,data\scraped_images\dumbbells\dumbbells_009.jpg,dumbbells
+20838,data\scraped_images\dumbbells\dumbbells_010.jpg,dumbbells
+20839,data\scraped_images\dumbbells\dumbbells_011.jpg,dumbbells
+20840,data\scraped_images\dumbbells\dumbbells_012.jpg,dumbbells
+20841,data\scraped_images\dumbbells\dumbbells_013.jpg,dumbbells
+20842,data\scraped_images\dumbbells\dumbbells_014.jpg,dumbbells
+20843,data\scraped_images\dumbbells\dumbbells_015.jpg,dumbbells
+20844,data\scraped_images\dumbbells\dumbbells_016.jpg,dumbbells
+20845,data\scraped_images\dumbbells\dumbbells_017.jpg,dumbbells
+20846,data\scraped_images\dumbbells\dumbbells_018.jpg,dumbbells
+20847,data\scraped_images\dumbbells\dumbbells_019.jpg,dumbbells
+20848,data\scraped_images\dumbbells\dumbbells_020.jpg,dumbbells
+20849,data\scraped_images\dumbbells\dumbbells_021.jpg,dumbbells
+20850,data\scraped_images\dumbbells\dumbbells_022.jpg,dumbbells
+20851,data\scraped_images\dumbbells\dumbbells_023.jpg,dumbbells
+20852,data\scraped_images\dumbbells\dumbbells_024.jpg,dumbbells
+20853,data\scraped_images\dumbbells\dumbbells_025.jpg,dumbbells
+20854,data\scraped_images\dumbbells\dumbbells_026.jpg,dumbbells
+20855,data\scraped_images\dumbbells\dumbbells_027.jpg,dumbbells
+20856,data\scraped_images\dumbbells\dumbbells_028.jpg,dumbbells
+20857,data\scraped_images\dumbbells\dumbbells_029.jpg,dumbbells
+20858,data\scraped_images\dumbbells\dumbbells_030.jpg,dumbbells
+20859,data\scraped_images\dumbbells\dumbbells_031.jpg,dumbbells
+20860,data\scraped_images\dumbbells\dumbbells_032.jpg,dumbbells
+20861,data\scraped_images\dumbbells\dumbbells_033.jpg,dumbbells
+20862,data\scraped_images\dumbbells\dumbbells_034.jpg,dumbbells
+20863,data\scraped_images\dumbbells\dumbbells_035.jpg,dumbbells
+20864,data\scraped_images\dumbbells\dumbbells_036.jpg,dumbbells
+20865,data\scraped_images\dumbbells\dumbbells_037.jpg,dumbbells
+20866,data\scraped_images\dumbbells\dumbbells_038.jpg,dumbbells
+20867,data\scraped_images\dumbbells\dumbbells_039.jpg,dumbbells
+20868,data\scraped_images\dumbbells\dumbbells_040.jpg,dumbbells
+20869,data\scraped_images\dumbbells\dumbbells_041.jpg,dumbbells
+20870,data\scraped_images\dumbbells\dumbbells_042.jpg,dumbbells
+20871,data\scraped_images\dumbbells\dumbbells_043.jpg,dumbbells
+20872,data\scraped_images\dumbbells\dumbbells_044.jpg,dumbbells
+20873,data\scraped_images\dumbbells\dumbbells_045.jpg,dumbbells
+20874,data\scraped_images\dumbbells\dumbbells_046.jpg,dumbbells
+20875,data\scraped_images\dumbbells\dumbbells_047.jpg,dumbbells
+20876,data\scraped_images\dumbbells\dumbbells_048.jpg,dumbbells
+20877,data\scraped_images\dumbbells\dumbbells_049.jpg,dumbbells
+20878,data\scraped_images\dumbbells\dumbbells_050.jpg,dumbbells
+20879,data\scraped_images\dumbbells\dumbbells_051.jpg,dumbbells
+20880,data\scraped_images\dumbbells\dumbbells_052.jpg,dumbbells
+20881,data\scraped_images\dumbbells\dumbbells_053.jpg,dumbbells
+20882,data\scraped_images\dumbbells\dumbbells_054.jpg,dumbbells
+20883,data\scraped_images\dumbbells\dumbbells_055.jpg,dumbbells
+20884,data\scraped_images\dumbbells\dumbbells_056.jpg,dumbbells
+20885,data\scraped_images\dumbbells\dumbbells_057.jpg,dumbbells
+20886,data\scraped_images\dumbbells\dumbbells_058.jpg,dumbbells
+20887,data\scraped_images\dumbbells\dumbbells_059.jpg,dumbbells
+20888,data\scraped_images\dumbbells\dumbbells_060.jpg,dumbbells
+20889,data\scraped_images\dumbbells\dumbbells_061.jpg,dumbbells
+20890,data\scraped_images\dumbbells\dumbbells_062.jpg,dumbbells
+20891,data\scraped_images\dumbbells\dumbbells_063.jpg,dumbbells
+20892,data\scraped_images\dumbbells\dumbbells_064.jpg,dumbbells
+20893,data\scraped_images\dumbbells\dumbbells_065.jpg,dumbbells
+20894,data\scraped_images\dumbbells\dumbbells_066.jpg,dumbbells
+20895,data\scraped_images\dumbbells\dumbbells_067.jpg,dumbbells
+20896,data\scraped_images\dumbbells\dumbbells_068.jpg,dumbbells
+20897,data\scraped_images\dumbbells\dumbbells_069.jpg,dumbbells
+20898,data\scraped_images\christmas_decoration\christmas_decoration_001.jpg,christmas decoration
+20899,data\scraped_images\christmas_decoration\christmas_decoration_002.jpg,christmas decoration
+20900,data\scraped_images\christmas_decoration\christmas_decoration_003.jpg,christmas decoration
+20901,data\scraped_images\christmas_decoration\christmas_decoration_004.jpg,christmas decoration
+20902,data\scraped_images\christmas_decoration\christmas_decoration_005.jpg,christmas decoration
+20903,data\scraped_images\christmas_decoration\christmas_decoration_006.jpg,christmas decoration
+20904,data\scraped_images\christmas_decoration\christmas_decoration_007.jpg,christmas decoration
+20905,data\scraped_images\christmas_decoration\christmas_decoration_008.jpg,christmas decoration
+20906,data\scraped_images\christmas_decoration\christmas_decoration_009.jpg,christmas decoration
+20907,data\scraped_images\christmas_decoration\christmas_decoration_010.jpg,christmas decoration
+20908,data\scraped_images\christmas_decoration\christmas_decoration_011.jpg,christmas decoration
+20909,data\scraped_images\christmas_decoration\christmas_decoration_012.jpg,christmas decoration
+20910,data\scraped_images\christmas_decoration\christmas_decoration_013.jpg,christmas decoration
+20911,data\scraped_images\christmas_decoration\christmas_decoration_014.jpg,christmas decoration
+20912,data\scraped_images\christmas_decoration\christmas_decoration_015.jpg,christmas decoration
+20913,data\scraped_images\christmas_decoration\christmas_decoration_016.jpg,christmas decoration
+20914,data\scraped_images\christmas_decoration\christmas_decoration_017.jpg,christmas decoration
+20915,data\scraped_images\christmas_decoration\christmas_decoration_018.jpg,christmas decoration
+20916,data\scraped_images\christmas_decoration\christmas_decoration_019.jpg,christmas decoration
+20917,data\scraped_images\christmas_decoration\christmas_decoration_020.jpg,christmas decoration
+20918,data\scraped_images\christmas_decoration\christmas_decoration_021.jpg,christmas decoration
+20919,data\scraped_images\christmas_decoration\christmas_decoration_022.jpg,christmas decoration
+20920,data\scraped_images\christmas_decoration\christmas_decoration_023.jpg,christmas decoration
+20921,data\scraped_images\christmas_decoration\christmas_decoration_024.jpg,christmas decoration
+20922,data\scraped_images\christmas_decoration\christmas_decoration_025.jpg,christmas decoration
+20923,data\scraped_images\christmas_decoration\christmas_decoration_026.jpg,christmas decoration
+20924,data\scraped_images\christmas_decoration\christmas_decoration_027.jpg,christmas decoration
+20925,data\scraped_images\christmas_decoration\christmas_decoration_028.jpg,christmas decoration
+20926,data\scraped_images\christmas_decoration\christmas_decoration_029.jpg,christmas decoration
+20927,data\scraped_images\christmas_decoration\christmas_decoration_030.jpg,christmas decoration
+20928,data\scraped_images\christmas_decoration\christmas_decoration_031.jpg,christmas decoration
+20929,data\scraped_images\christmas_decoration\christmas_decoration_032.jpg,christmas decoration
+20930,data\scraped_images\christmas_decoration\christmas_decoration_033.jpg,christmas decoration
+20931,data\scraped_images\christmas_decoration\christmas_decoration_034.jpg,christmas decoration
+20932,data\scraped_images\christmas_decoration\christmas_decoration_035.jpg,christmas decoration
+20933,data\scraped_images\christmas_decoration\christmas_decoration_036.jpg,christmas decoration
+20934,data\scraped_images\christmas_decoration\christmas_decoration_037.jpg,christmas decoration
+20935,data\scraped_images\christmas_decoration\christmas_decoration_038.jpg,christmas decoration
+20936,data\scraped_images\christmas_decoration\christmas_decoration_039.jpg,christmas decoration
+20937,data\scraped_images\christmas_decoration\christmas_decoration_040.jpg,christmas decoration
+20938,data\scraped_images\christmas_decoration\christmas_decoration_041.jpg,christmas decoration
+20939,data\scraped_images\christmas_decoration\christmas_decoration_042.jpg,christmas decoration
+20940,data\scraped_images\christmas_decoration\christmas_decoration_043.jpg,christmas decoration
+20941,data\scraped_images\christmas_decoration\christmas_decoration_044.jpg,christmas decoration
+20942,data\scraped_images\christmas_decoration\christmas_decoration_045.jpg,christmas decoration
+20943,data\scraped_images\christmas_decoration\christmas_decoration_046.jpg,christmas decoration
+20944,data\scraped_images\christmas_decoration\christmas_decoration_047.jpg,christmas decoration
+20945,data\scraped_images\christmas_decoration\christmas_decoration_048.jpg,christmas decoration
+20946,data\scraped_images\christmas_decoration\christmas_decoration_049.jpg,christmas decoration
+20947,data\scraped_images\christmas_decoration\christmas_decoration_050.jpg,christmas decoration
+20948,data\scraped_images\christmas_decoration\christmas_decoration_051.jpg,christmas decoration
+20949,data\scraped_images\christmas_decoration\christmas_decoration_052.jpg,christmas decoration
+20950,data\scraped_images\christmas_decoration\christmas_decoration_053.jpg,christmas decoration
+20951,data\scraped_images\christmas_decoration\christmas_decoration_054.jpg,christmas decoration
+20952,data\scraped_images\christmas_decoration\christmas_decoration_055.jpg,christmas decoration
+20953,data\scraped_images\christmas_decoration\christmas_decoration_056.jpg,christmas decoration
+20954,data\scraped_images\christmas_decoration\christmas_decoration_057.jpg,christmas decoration
+20955,data\scraped_images\christmas_decoration\christmas_decoration_058.jpg,christmas decoration
+20956,data\scraped_images\christmas_decoration\christmas_decoration_059.jpg,christmas decoration
+20957,data\scraped_images\christmas_decoration\christmas_decoration_060.jpg,christmas decoration
+20958,data\scraped_images\christmas_decoration\christmas_decoration_061.jpg,christmas decoration
+20959,data\scraped_images\christmas_decoration\christmas_decoration_062.jpg,christmas decoration
+20960,data\scraped_images\christmas_decoration\christmas_decoration_063.jpg,christmas decoration
+20961,data\scraped_images\christmas_decoration\christmas_decoration_064.jpg,christmas decoration

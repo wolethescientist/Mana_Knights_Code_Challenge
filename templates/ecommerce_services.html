@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="file"] {
+            padding: 8px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .results-section {
+            margin-top: 30px;
+        }
+        .search-result-block {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .search-result-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+        }
+        .natural-language-response {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .error {
+            background: #ffe6e6;
+            color: #d32f2f;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border-left: 4px solid #d32f2f;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        .score {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .ocr-info {
+            background: #f0f8ff;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border-left: 4px solid #28a745;
+        }
+        .extracted-text {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffc107;
+            font-style: italic;
+        }
+        .cnn-info {
+            background: #e8f5e8;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border-left: 4px solid #28a745;
+        }
+        .predicted-class {
+            background: #f0f8ff;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border-left: 4px solid #007bff;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Recommendation System</h1>
+        
+        <div class="form-section">
+            <h2>1. Text-Based Product Search</h2>
+            <form id="recommendationForm">
+                <div class="form-group">
+                    <label for="query">Enter your query:</label>
+                    <input type="text" id="query" name="query" placeholder="e.g., gaming laptop, wireless headphones, camera for beginners" required>
+                </div>
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>2. OCR-Based Query Processing</h2>
+            <p>Upload an image containing handwritten or printed text to search for products.</p>
+            <form id="ocrForm">
+                <div class="form-group">
+                    <label for="imageFile">Upload Image:</label>
+                    <input type="file" id="imageFile" name="image_data" accept="image/*" required>
+                    <small>Supported formats: JPG, PNG, BMP, TIFF, GIF (Max: 10MB)</small>
+                </div>
+                <button type="submit">Process Image & Search</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>3. Image-Based Product Detection</h2>
+            <p>Upload a product image to identify the product using our CNN model and find matching products.</p>
+            <form id="imageProductForm">
+                <div class="form-group">
+                    <label for="productImageFile">Upload Product Image:</label>
+                    <input type="file" id="productImageFile" name="product_image" accept="image/*" required>
+                    <small>Supported formats: JPG, PNG, BMP, TIFF, GIF (Max: 10MB)</small>
+                </div>
+                <button type="submit">Detect Product & Search</button>
+            </form>
+        </div>
+        
+        <!-- Unified Results Section -->
+        <div id="allResults" class="results-section" style="display: none;">
+            <h2>Search Results</h2>
+
+            <!-- Text-Based Search Results -->
+            <div id="textSearchBlock" class="search-result-block" style="display: none;">
+                <div class="search-result-title">1. Text-Based Product Search Results</div>
+
+                <div id="loading" class="loading" style="display: none;">
+                    Searching for products...
+                </div>
+
+                <div id="error" class="error" style="display: none;"></div>
+
+                <div id="naturalLanguageResponse" class="natural-language-response" style="display: none;"></div>
+
+                <div id="productsTable" style="display: none;">
+                    <h3>Recommended Products</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Stock Code</th>
+                                <th>Description</th>
+                                <th>Unit Price (£)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- OCR-Based Search Results -->
+            <div id="ocrSearchBlock" class="search-result-block" style="display: none;">
+                <div class="search-result-title">2. OCR-Based Query Processing Results</div>
+
+                <div id="ocrLoading" class="loading" style="display: none;">
+                    Processing image and searching for products...
+                </div>
+
+                <div id="ocrError" class="error" style="display: none;"></div>
+
+                <div id="extractedText" class="extracted-text" style="display: none;">
+                    <strong>Extracted Text:</strong> <span id="extractedTextContent"></span>
+                </div>
+
+                <div id="ocrInfo" class="ocr-info" style="display: none;">
+                    <strong>OCR Confidence:</strong> <span id="ocrConfidence"></span>%
+                </div>
+
+                <div id="ocrNaturalLanguageResponse" class="natural-language-response" style="display: none;"></div>
+
+                <div id="ocrProductsTable" style="display: none;">
+                    <h3>Recommended Products</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Stock Code</th>
+                                <th>Description</th>
+                                <th>Unit Price (£)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ocrProductsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Image-Based Product Detection Results -->
+            <div id="imageSearchBlock" class="search-result-block" style="display: none;">
+                <div class="search-result-title">3. Image-Based Product Detection Results</div>
+
+                <div id="imageProductLoading" class="loading" style="display: none;">
+                    Analyzing product image and searching for matches...
+                </div>
+
+                <div id="imageProductError" class="error" style="display: none;"></div>
+
+                <div id="predictedClass" class="predicted-class" style="display: none;">
+                    <strong>Detected Product:</strong> <span id="predictedClassName"></span>
+                    <br><strong>Confidence:</strong> <span id="predictionConfidence"></span>%
+                </div>
+
+                <div id="cnnInfo" class="cnn-info" style="display: none;">
+                    <strong>Top 3 Predictions:</strong>
+                    <div id="top3Predictions"></div>
+                </div>
+
+                <div id="imageProductNaturalLanguageResponse" class="natural-language-response" style="display: none;"></div>
+
+                <div id="imageProductsTable" style="display: none;">
+                    <h3>Matching Products</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Stock Code</th>
+                                <th>Description</th>
+                                <th>Unit Price (£)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="imageProductsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('recommendationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const query = document.getElementById('query').value;
+            const allResultsDiv = document.getElementById('allResults');
+            const textSearchBlock = document.getElementById('textSearchBlock');
+            const loadingDiv = document.getElementById('loading');
+            const errorDiv = document.getElementById('error');
+            const naturalLanguageDiv = document.getElementById('naturalLanguageResponse');
+            const productsTableDiv = document.getElementById('productsTable');
+
+            // Show results section and text search block
+            allResultsDiv.style.display = 'block';
+            textSearchBlock.style.display = 'block';
+            loadingDiv.style.display = 'block';
+            errorDiv.style.display = 'none';
+            naturalLanguageDiv.style.display = 'none';
+            productsTableDiv.style.display = 'none';
+            
+            try {
+                const formData = new FormData();
+                formData.append('query', query);
+                
+                const response = await fetch('/product-recommendation', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                // Hide loading
+                loadingDiv.style.display = 'none';
+                
+                if (result.error) {
+                    // Show error
+                    errorDiv.textContent = result.error;
+                    errorDiv.style.display = 'block';
+                } else {
+                    // Show natural language response
+                    naturalLanguageDiv.textContent = result.response;
+                    naturalLanguageDiv.style.display = 'block';
+                    
+                    // Show products table if there are products
+                    if (result.products && result.products.length > 0) {
+                        const tbody = document.getElementById('productsTableBody');
+                        tbody.innerHTML = '';
+                        
+                        result.products.forEach(product => {
+                            const row = document.createElement('tr');
+                            
+                            row.innerHTML = `
+                                <td>${product.stock_code}</td>
+                                <td>${product.description}</td>
+                                <td>£${parseFloat(product.unit_price).toFixed(2)}</td>
+                            `;
+                            
+                            tbody.appendChild(row);
+                        });
+                        
+                        productsTableDiv.style.display = 'block';
+                    }
+                }
+                
+            } catch (error) {
+                loadingDiv.style.display = 'none';
+                errorDiv.textContent = 'An error occurred while processing your request. Please try again.';
+                errorDiv.style.display = 'block';
+                console.error('Error:', error);
+            }
+        });
+
+        // OCR Form handling
+        document.getElementById('ocrForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const imageFile = document.getElementById('imageFile').files[0];
+            if (!imageFile) {
+                alert('Please select an image file');
+                return;
+            }
+
+            const allResultsDiv = document.getElementById('allResults');
+            const ocrSearchBlock = document.getElementById('ocrSearchBlock');
+            const ocrLoadingDiv = document.getElementById('ocrLoading');
+            const ocrErrorDiv = document.getElementById('ocrError');
+            const extractedTextDiv = document.getElementById('extractedText');
+            const ocrInfoDiv = document.getElementById('ocrInfo');
+            const ocrNaturalLanguageDiv = document.getElementById('ocrNaturalLanguageResponse');
+            const ocrProductsTableDiv = document.getElementById('ocrProductsTable');
+
+            // Show results section and OCR search block
+            allResultsDiv.style.display = 'block';
+            ocrSearchBlock.style.display = 'block';
+            ocrLoadingDiv.style.display = 'block';
+            ocrErrorDiv.style.display = 'none';
+            extractedTextDiv.style.display = 'none';
+            ocrInfoDiv.style.display = 'none';
+            ocrNaturalLanguageDiv.style.display = 'none';
+            ocrProductsTableDiv.style.display = 'none';
+
+            try {
+                const formData = new FormData();
+                formData.append('image_data', imageFile);
+
+                const response = await fetch('/ocr-query', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                // Hide loading
+                ocrLoadingDiv.style.display = 'none';
+
+                if (result.error) {
+                    // Show error
+                    ocrErrorDiv.textContent = result.error;
+                    ocrErrorDiv.style.display = 'block';
+                } else {
+                    // Show extracted text
+                    if (result.extracted_text) {
+                        document.getElementById('extractedTextContent').textContent = result.extracted_text;
+                        extractedTextDiv.style.display = 'block';
+                    }
+
+                    // Show OCR confidence
+                    if (result.ocr_confidence !== undefined) {
+                        document.getElementById('ocrConfidence').textContent = result.ocr_confidence.toFixed(1);
+                        ocrInfoDiv.style.display = 'block';
+                    }
+
+                    // Show natural language response
+                    ocrNaturalLanguageDiv.textContent = result.response;
+                    ocrNaturalLanguageDiv.style.display = 'block';
+
+                    // Show products table if there are products
+                    if (result.products && result.products.length > 0) {
+                        const tbody = document.getElementById('ocrProductsTableBody');
+                        tbody.innerHTML = '';
+
+                        result.products.forEach(product => {
+                            const row = document.createElement('tr');
+
+                            row.innerHTML = `
+                                <td>${product.stock_code}</td>
+                                <td>${product.description}</td>
+                                <td>£${parseFloat(product.unit_price).toFixed(2)}</td>
+                            `;
+
+                            tbody.appendChild(row);
+                        });
+
+                        ocrProductsTableDiv.style.display = 'block';
+                    }
+                }
+
+            } catch (error) {
+                ocrLoadingDiv.style.display = 'none';
+                ocrErrorDiv.textContent = 'An error occurred while processing your image. Please try again.';
+                ocrErrorDiv.style.display = 'block';
+                console.error('Error:', error);
+            }
+        });
+
+        // Image Product Detection Form handling
+        document.getElementById('imageProductForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const productImageFile = document.getElementById('productImageFile').files[0];
+            if (!productImageFile) {
+                alert('Please select a product image file');
+                return;
+            }
+
+            const allResultsDiv = document.getElementById('allResults');
+            const imageSearchBlock = document.getElementById('imageSearchBlock');
+            const imageProductLoadingDiv = document.getElementById('imageProductLoading');
+            const imageProductErrorDiv = document.getElementById('imageProductError');
+            const predictedClassDiv = document.getElementById('predictedClass');
+            const cnnInfoDiv = document.getElementById('cnnInfo');
+            const imageProductNaturalLanguageDiv = document.getElementById('imageProductNaturalLanguageResponse');
+            const imageProductsTableDiv = document.getElementById('imageProductsTable');
+
+            // Show results section and image search block
+            allResultsDiv.style.display = 'block';
+            imageSearchBlock.style.display = 'block';
+            imageProductLoadingDiv.style.display = 'block';
+            imageProductErrorDiv.style.display = 'none';
+            predictedClassDiv.style.display = 'none';
+            cnnInfoDiv.style.display = 'none';
+            imageProductNaturalLanguageDiv.style.display = 'none';
+            imageProductsTableDiv.style.display = 'none';
+
+            try {
+                const formData = new FormData();
+                formData.append('product_image', productImageFile);
+
+                const response = await fetch('/image-product-search', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                // Hide loading
+                imageProductLoadingDiv.style.display = 'none';
+
+                if (result.error) {
+                    // Show error
+                    imageProductErrorDiv.textContent = result.error;
+                    imageProductErrorDiv.style.display = 'block';
+                } else {
+                    // Show predicted class and confidence
+                    if (result.predicted_class) {
+                        document.getElementById('predictedClassName').textContent = result.predicted_class;
+                        document.getElementById('predictionConfidence').textContent = (result.confidence * 100).toFixed(1);
+                        predictedClassDiv.style.display = 'block';
+                    }
+
+                    // Show top 3 predictions
+                    if (result.top_3_predictions && result.top_3_predictions.length > 0) {
+                        const top3Div = document.getElementById('top3Predictions');
+                        top3Div.innerHTML = '';
+
+                        result.top_3_predictions.forEach((pred, index) => {
+                            const predDiv = document.createElement('div');
+                            predDiv.innerHTML = `${index + 1}. ${pred.class} (${(pred.confidence * 100).toFixed(1)}%)`;
+                            top3Div.appendChild(predDiv);
+                        });
+
+                        cnnInfoDiv.style.display = 'block';
+                    }
+
+                    // Show natural language response
+                    imageProductNaturalLanguageDiv.textContent = result.response;
+                    imageProductNaturalLanguageDiv.style.display = 'block';
+
+                    // Show products table if there are products
+                    if (result.products && result.products.length > 0) {
+                        const tbody = document.getElementById('imageProductsTableBody');
+                        tbody.innerHTML = '';
+
+                        result.products.forEach(product => {
+                            const row = document.createElement('tr');
+
+                            row.innerHTML = `
+                                <td>${product.stock_code}</td>
+                                <td>${product.description}</td>
+                                <td>£${parseFloat(product.unit_price).toFixed(2)}</td>
+                            `;
+
+                            tbody.appendChild(row);
+                        });
+
+                        imageProductsTableDiv.style.display = 'block';
+                    }
+                }
+
+            } catch (error) {
+                imageProductLoadingDiv.style.display = 'none';
+                imageProductErrorDiv.textContent = 'An error occurred while processing your product image. Please try again.';
+                imageProductErrorDiv.style.display = 'block';
+                console.error('Error:', error);
+            }
+        });
+
+    </script>
+</body>
+</html> 

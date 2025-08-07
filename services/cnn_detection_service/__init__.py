@@ -1,0 +1,1 @@
+from .product_detection_service import CNNProductDetectionService
