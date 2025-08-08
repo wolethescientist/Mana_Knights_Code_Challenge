@@ -23,98 +23,18 @@ from ..vector_knowledge_base.vector_service import VectorService
 class ProductRecommendationService:
     """Service for providing product recommendations.
 
-    This service loads product data, generates embeddings for product descriptions,
-    and uses a vector store to find products that are semantically similar to a
-    given query.
+    This service uses a vector store to find products that are semantically similar
+    to a given query. It assumes that the vector store has already been populated
+    by the RecommendationDataPipeline.
 
     Attributes:
-        embedding_service (EmbeddingService): The service used to create text embeddings.
         vector_store (VectorService): The service used to store and search vectors.
-        products_df (pd.DataFrame): A DataFrame containing the unique products.
     """
     def __init__(self) -> None:
         """Initializes the ProductRecommendationService."""
         print("Initializing recommendation service...")
-
-        if EMBEDDING_SERVICE_AVAILABLE:
-            self.embedding_service = EmbeddingService()
-            print("Embedding service initialized")
-        else:
-            self.embedding_service = None
-            print("Warning: Embedding service not available, using fallback methods")
-
         self.vector_store = VectorService()
         print("Vector store initialized")
-
-        # Load and prepare product data
-        print("Loading product data...")
-        self.load_product_data()
-        print("Product data loaded")
-    
-    def load_product_data(self) -> None:
-        """Loads product data from a CSV file and populates the vector store.
-
-        This method reads product data, cleans it, generates embeddings for the
-        product descriptions, and upserts the vectors into the vector store.
-
-        Raises:
-            Exception: If the product data fails to load or process.
-        """
-        try:
-            print("Loading product data from CSV...")
-            df = pd.read_csv('data/dataset/cleaned_dataset.csv')
-            print(f"Loaded {len(df)} rows from CSV")
-
-            # Filter out invalid entries before grouping
-            print("Filtering out invalid entries...")
-            # Remove rows with 'Ebay' descriptions, zero prices, or invalid data
-            df = df[
-                (df['Description'].str.lower() != 'ebay') &
-                (df['UnitPrice'] > 0) &
-                (df['Description'].notna()) &
-                (df['Description'].str.strip() != '') &
-                (df['StockCode'].notna())
-            ]
-            print(f"After filtering: {len(df)} valid rows")
-
-            # Group by StockCode to get unique products
-            self.products_df = df.groupby('StockCode').agg({
-                'Description': 'first',
-                'UnitPrice': 'mean'
-            }).reset_index()
-            print(f"Found {len(self.products_df)} unique products")
-            
-            # Generate embeddings for all product descriptions
-            print("Generating embeddings for product descriptions...")
-            descriptions = self.products_df['Description'].tolist()
-            embeddings = self.embedding_service.create_embeddings_batch(descriptions)
-            print(f"Generated {len(embeddings)} embeddings")
-            
-            # Prepare metadata for vector store
-            print("Preparing metadata...")
-            metadata = []
-            for _, row in self.products_df.iterrows():
-                # Ensure valid data before adding to metadata
-                if (pd.notna(row['Description']) and
-                    str(row['Description']).strip() != '' and
-                    str(row['Description']).lower() != 'ebay' and
-                    pd.notna(row['UnitPrice']) and
-                    float(row['UnitPrice']) > 0):
-
-                    metadata.append({
-                        'stock_code': str(row['StockCode']),
-                        'description': str(row['Description']),
-                        'unit_price': float(row['UnitPrice'])
-                    })
-            print(f"Prepared metadata for {len(metadata)} valid products")
-            
-            # Upload to vector store
-            print("Uploading vectors to Pinecone...")
-            self.vector_store.upsert_vectors(embeddings.tolist(), metadata)
-            print("Product data loaded successfully")
-            
-        except Exception as e:
-            raise Exception(f"Failed to load product data: {str(e)}")
     
     def get_recommendations(
         self, 

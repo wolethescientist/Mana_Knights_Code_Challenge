@@ -82,32 +82,33 @@ class OCRService:
 
             # Try multiple thresholding approaches and pick the best one
             # Method 1: Adaptive thresholding with Gaussian
-            thresh1 = cv2.adaptiveThreshold(
+            gaussian_thresh = cv2.adaptiveThreshold(
                 blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
             )
 
             # Method 2: Adaptive thresholding with Mean
-            thresh2 = cv2.adaptiveThreshold(
+            mean_thresh = cv2.adaptiveThreshold(
                 blurred, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2
             )
 
             # Method 3: Otsu's thresholding
-            _, thresh3 = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            _, otsu_thresh = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
             # Choose the threshold method that produces the most balanced result
             # (not too much black or white pixels)
-            def evaluate_threshold(thresh_img):
-                white_pixels = np.sum(thresh_img == 255)
-                total_pixels = thresh_img.size
-                white_ratio = white_pixels / total_pixels
-                # Prefer images with 70-90% white pixels (text on white background)
-                if 0.7 <= white_ratio <= 0.9:
-                    return abs(0.8 - white_ratio)  # Closer to 80% is better
-                else:
-                    return 1.0  # Penalize heavily
+            scores = {
+                'gaussian': self._evaluate_threshold(gaussian_thresh),
+                'mean': self._evaluate_threshold(mean_thresh),
+                'otsu': self._evaluate_threshold(otsu_thresh)
+            }
+            best_method = max(scores, key=scores.get)
 
-            scores = [evaluate_threshold(t) for t in [thresh1, thresh2, thresh3]]
-            best_thresh = [thresh1, thresh2, thresh3][np.argmin(scores)]
+            if best_method == 'gaussian':
+                best_thresh = gaussian_thresh
+            elif best_method == 'mean':
+                best_thresh = mean_thresh
+            else:
+                best_thresh = otsu_thresh
 
             # Light denoising (less aggressive for handwritten text)
             denoised = cv2.medianBlur(best_thresh, 3)
@@ -151,6 +152,16 @@ class OCRService:
         except Exception as e:
             self.logger.error(f"Error preprocessing image: {e}")
             return image
+
+    def _evaluate_threshold(self, thresh_img: np.ndarray) -> float:
+        """Evaluates a thresholded image to determine its quality for OCR."""
+        white_pixels = np.sum(thresh_img == 255)
+        total_pixels = thresh_img.size
+        white_ratio = white_pixels / total_pixels
+        # Prefer images with 70-90% white pixels (text on white background)
+        if 0.7 <= white_ratio <= 0.9:
+            return 100 - abs(white_ratio - 0.8) * 500  # High score for good balance
+        return abs(white_ratio - 0.5) * 100  # Lower score for less balanced
 
     def extract_text_from_image(self, image_data: Any, preprocess: bool = True) -> Tuple[str, float]:
         """

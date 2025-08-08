@@ -16,7 +16,7 @@ import pandas as pd
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, project_root)
 
-from services.cnn_detection_service.product_detection_service import CNNProductDetectionService
+from services.image_detection_service.product_detection_service import CNNProductDetectionService
 
 def test_cnn_model() -> None:
     """Tests the CNN model with a few sample images from the dataset.
@@ -33,7 +33,7 @@ def test_cnn_model() -> None:
     print("Testing CNN Product Detection Service...")
     
     # Check if model files exist
-    model_path = 'models/product_cnn_model.h5'
+    model_path = 'models/product_classifier.h5'
     label_encoder_path = 'models/label_encoder.pkl'
     
     if not os.path.exists(model_path):
@@ -57,7 +57,7 @@ def test_cnn_model() -> None:
         print("CNN service initialized successfully!")
         
         # Load test data
-        df = pd.read_csv('data/dataset/CNN_Model_Train_Data.csv')
+        df = pd.read_csv('data/dataset/cnn_model_train.csv')
         
         # Test with a few sample images
         test_samples = df.sample(n=5, random_state=42)

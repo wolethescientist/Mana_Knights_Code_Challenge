@@ -17,16 +17,20 @@ from typing import Tuple
 PROJECT_ROOT: str = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 # Absolute path to the training data CSV file.
-CSV_PATH: str = os.path.join(PROJECT_ROOT, 'data', 'dataset', 'CNN_Model_Train_Data.csv')
+CSV_PATH: str = os.path.join(PROJECT_ROOT, 'data', 'dataset', 'cnn_model_train.csv')
 
 # Directory to save the trained model and label encoder.
 MODEL_DIR: str = os.path.join(PROJECT_ROOT, 'models')
 
 # Full path for saving the trained Keras model.
-MODEL_SAVE_PATH: str = os.path.join(MODEL_DIR, 'product_cnn_model.h5')
+MODEL_SAVE_PATH: str = os.path.join(MODEL_DIR, 'product_classifier.h5')
 
 # Full path for saving the label encoder.
 LABEL_ENCODER_PATH: str = os.path.join(MODEL_DIR, 'label_encoder.pkl')
+
+# Alias for inference pipeline
+MODEL_PATH: str = MODEL_SAVE_PATH
+ENCODER_PATH: str = LABEL_ENCODER_PATH
 
 
 # =============================================================================
@@ -34,6 +38,9 @@ LABEL_ENCODER_PATH: str = os.path.join(MODEL_DIR, 'label_encoder.pkl')
 # =============================================================================
 # Target image size for resizing (width, height).
 IMG_SIZE: Tuple[int, int] = (64, 64)
+
+# Unpack image dimensions for individual access.
+IMAGE_WIDTH, IMAGE_HEIGHT = IMG_SIZE
 
 # Number of samples per gradient update.
 BATCH_SIZE: int = 32

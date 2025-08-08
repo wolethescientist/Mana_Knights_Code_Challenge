@@ -420,7 +420,7 @@ def scrape_images_with_selenium(
         
         # Save to CSV
         df = pd.DataFrame(csv_data)
-        csv_path = "data/dataset/CNN_Model_Train_Data.csv"
+        csv_path = "data/dataset/cnn_model_train.csv"
         df.to_csv(csv_path, index=False)
         
         actual_products_processed = len(csv_data)

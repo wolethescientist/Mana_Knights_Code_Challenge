@@ -14,5 +14,5 @@ selenium
 webdriver-manager
 lxml
 tensorflow
-keras
+
 

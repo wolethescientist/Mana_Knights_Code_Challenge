@@ -1,0 +1,6 @@
+{"timestamp": "2025-08-08T22:02:47.915300Z", "level": "INFO", "message": "ProductRecommendationService initialized", "module": "app", "function": "<module>", "line": 54, "duration_ms": 11663.314819335938}
+{"timestamp": "2025-08-08T22:02:50.849827Z", "level": "INFO", "message": "OCRQueryService initialized", "module": "app", "function": "<module>", "line": 77, "duration_ms": 0.29158592224121094}
+{"timestamp": "2025-08-08T22:02:51.217057Z", "level": "INFO", "message": "CNNProductDetectionService initialized", "module": "app", "function": "<module>", "line": 87, "duration_ms": 366.6667938232422}
+{"timestamp": "2025-08-08T22:03:25.882297Z", "level": "INFO", "message": "ProductRecommendationService initialized", "module": "app", "function": "<module>", "line": 54, "duration_ms": 13446.831941604614}
+{"timestamp": "2025-08-08T22:03:27.863794Z", "level": "INFO", "message": "OCRQueryService initialized", "module": "app", "function": "<module>", "line": 77, "duration_ms": 0.27370452880859375}
+{"timestamp": "2025-08-08T22:03:28.052074Z", "level": "INFO", "message": "CNNProductDetectionService initialized", "module": "app", "function": "<module>", "line": 87, "duration_ms": 187.7114772796631}

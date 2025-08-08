@@ -9,6 +9,7 @@ from typing import List, Union, Optional
 import logging
 
 try:
+    import torch
     from sentence_transformers import SentenceTransformer
     SENTENCE_TRANSFORMERS_AVAILABLE = True
 except ImportError:

@@ -43,24 +43,24 @@ The following diagram illustrates the architectural flow of the system:
 
 ```mermaid
 graph TD
-    subgraph User Interfaces
+    subgraph "User Interfaces"
         UI_Text["Text Query UI"] --> B_API
         UI_OCR["OCR Query UI"] --> B_API
         UI_Image["Image Detection UI"] --> B_API
     end
 
-    subgraph Backend API (Flask)
+    subgraph "Backend API (Flask)"
         B_API["Flask App"]
     end
 
-    subgraph Core Services
+    subgraph "Core Services"
         S_Rec["ProductRecommendationService"]
         S_OCR["OCRQueryService"]
         S_CNN["CNNProductDetectionService"]
         S_Scrape["WebScrapingService"]
     end
 
-    subgraph Data Stores
+    subgraph "Data Stores"
         DB_Pinecone["Pinecone Vector DB"]
         DS_Model["CNN Model"]
         DS_CSV["Product CSV"]
@@ -135,10 +135,31 @@ To get the application up and running, follow these steps:
 
     ```
     PINECONE_API_KEY="your-pinecone-api-key"
-    PINECONE_ENVIRONMENT="your-pinecone-environment"
     ```
 
-5.  **Run the application:**
+5.  **Run the Data and Training Pipelines:**
+
+    Before running the main application, you need to process the data for the recommendation service and train the CNN model. These tasks are now handled by dedicated pipelines.
+
+    -   **Run the Recommendation Data Pipeline:**
+
+        This pipeline processes the product data, generates embeddings, and populates the vector store. To run it, execute the following command:
+
+        ```bash
+        python -m pipelines.recommendation_data_pipeline
+        ```
+
+    -   **Run the CNN Training Pipeline:**
+
+        This pipeline trains the CNN model for product image detection. To run it, execute the following command:
+
+        ```bash
+        python -m pipelines.cnn_training_pipeline
+        ```
+
+6.  **Run the application:**
+
+    Once the pipelines have been successfully executed, you can start the main application:
 
     ```bash
     python app.py
