@@ -1,5 +1,88 @@
 # Pipelines Documentation
 
+This document provides an overview of the data and model pipelines used in the application.
+
+---
+
+## 1. Recommendation Data Pipeline
+
+**File:** `pipelines/recommendation_data_pipeline.py`
+
+### Purpose
+This pipeline is responsible for processing the product dataset, generating vector embeddings for product descriptions, and storing them in a vector knowledge base for efficient similarity searches.
+
+### Steps
+1.  **Load Data**: Loads the product dataset from `data/dataset/cleaned_dataset.csv`.
+2.  **Clean and Filter**: Removes irrelevant or invalid data, such as entries with no description, a unit price of zero, or descriptions containing generic terms like 'ebay'.
+3.  **Aggregate Products**: Groups the data by `StockCode` to create a unique list of products, calculating the mean `UnitPrice`.
+4.  **Generate Embeddings**: Uses the `EmbeddingService` to create vector embeddings for each product description.
+5.  **Prepare Metadata**: Structures the product information (stock code, description, unit price) into a metadata format.
+6.  **Upsert to Vector Store**: Inserts or updates the embeddings and their corresponding metadata in the vector store using the `VectorService`.
+
+### How to Run
+This pipeline can be executed as a standalone script to populate or update the vector knowledge base:
+```bash
+python pipelines/recommendation_data_pipeline.py
+```
+
+---
+
+## 2. CNN Training Pipeline
+
+**File:** `pipelines/cnn_training_pipeline.py`
+
+### Purpose
+This pipeline orchestrates the training of a Convolutional Neural Network (CNN) for image-based product classification.
+
+### Steps
+1.  **Load Data**: Loads and preprocesses images and their corresponding labels from the training dataset using the `data_loader`.
+2.  **Encode Labels**: Converts the text-based labels into one-hot encoded vectors suitable for training.
+3.  **Split Data**: Splits the dataset into training and testing sets.
+4.  **Create and Compile Model**: Builds a simple CNN model architecture and compiles it with an optimizer (`adam`) and a loss function (`categorical_crossentropy`).
+5.  **Train Model**: Trains the CNN on the training data for a predefined number of epochs.
+6.  **Evaluate Model**: Measures the model's performance on the test set.
+7.  **Save Artifacts**: Saves the trained model (`product_classifier.h5`) and the label encoder (`label_encoder.pkl`) to the `models/` directory for later use in inference.
+
+### How to Run
+This pipeline can be run as a standalone script to train the CNN model from scratch:
+```bash
+python pipelines/cnn_training_pipeline.py
+```
+
+---
+
+## 3. CNN Inference Pipeline
+
+**File:** `pipelines/cnn_inference_pipeline.py`
+
+### Purpose
+This pipeline uses the pre-trained CNN model to perform inference on a given image, predicting the product category.
+
+### Steps
+1.  **Load Artifacts**: Initializes by loading the saved CNN model and the label encoder.
+2.  **Preprocess Image**: Takes an input image, converts it to RGB, resizes it to the required dimensions, and normalizes the pixel values.
+3.  **Make Prediction**: Feeds the preprocessed image into the model to get a prediction.
+4.  **Format Output**: Returns a dictionary containing the predicted class, the confidence score, and the top 3 predictions with their respective confidence scores.
+
+---
+
+## 4. OCR Inference Pipeline
+
+**File:** `pipelines/ocr_inference_pipeline.py`
+
+### Purpose
+This pipeline integrates Optical Character Recognition (OCR) with the product recommendation service. It extracts text from an image and uses it as a query to find relevant products.
+
+### Dependencies
+-   `ProductRecommendationService`: Required for fetching recommendations based on the extracted text.
+
+### Steps
+1.  **Extract Text**: Uses the `OCRService` to extract text and a confidence score from an input image.
+2.  **Validate Text**: Checks if any text was found and if it's readable enough to be a valid query.
+3.  **Clean Text**: Cleans the raw extracted text by removing common OCR artifacts and extra whitespace.
+4.  **Get Recommendations**: Passes the cleaned text to the `ProductRecommendationService` to get a list of recommended products.
+5.  **Format Output**: Returns a dictionary containing the extracted text, OCR confidence, recommended products, and the cleaned query.
+
 This document explains the pipelines implemented in this codebase, why they exist, how they are used, and where they are invoked. It also references relevant source locations with line numbers for quick navigation.
 
 
