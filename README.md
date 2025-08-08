@@ -1,5 +1,87 @@
 # E-commerce AI-Powered Product Discovery
 
+This project is a Flask-based web application that provides a suite of AI-powered services for e-commerce product discovery. It includes functionalities for product recommendation via text and OCR, as well as image-based product detection.
+
+---
+
+## Features
+
+-   **Text-Based Product Recommendation**: Get product recommendations based on a textual query.
+-   **OCR-Based Product Search**: Extract text from an image (e.g., a handwritten note) and use it to search for products.
+-   **Image-Based Product Detection**: Identify products from an image using a Convolutional Neural Network (CNN).
+-   **Vector-Based Similarity Search**: Utilizes a vector knowledge base for fast and accurate similarity searches.
+-   **Automated Data Pipeline**: Automatically populates the vector knowledge base if it's empty on startup.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+-   Python 3.8+
+-   Tesseract OCR Engine
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
+
+2.  **Create a virtual environment:**
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+    ```
+
+3.  **Install the dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Set up environment variables:**
+    Create a `.env` file in the root of the project and add any necessary environment variables (e.g., API keys for services like Pinecone).
+
+### Running the Application
+
+To start the Flask application, run:
+```bash
+python app.py
+```
+The application will be available at `http://127.0.0.1:5000`.
+
+---
+
+## Project Structure
+
+-   `app.py`: The main Flask application file.
+-   `frontend/`: Contains the HTML templates for the web interface.
+-   `services/`: Houses the core logic for the different services (recommendation, OCR, CNN).
+-   `pipelines/`: Contains the data and model training pipelines.
+-   `models/`: Stores the trained machine learning models.
+-   `data/`: Contains the dataset used for training and recommendations.
+-   `requirements.txt`: A list of the Python dependencies.
+-   `pipelines_documentation.md`: Detailed documentation of the data and model pipelines.
+
+---
+
+## API Endpoints
+
+The application exposes the following API endpoints:
+
+-   `GET /`: Renders the main user interface.
+-   `POST /query`: Handles text-based product recommendation queries.
+-   `POST /ocr-query`: Handles product queries from text extracted via OCR.
+-   `POST /detect-product`: Handles image-based product detection using the CNN model.
+
+---
+
+## Pipelines
+
+For detailed information about the data and model pipelines, please refer to the [Pipelines Documentation](pipelines_documentation.md).
+
+
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Python Version](https://img.shields.io/badge/python-3.9%2B-blueviolet)
