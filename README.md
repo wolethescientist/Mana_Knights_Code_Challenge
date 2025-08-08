@@ -135,7 +135,6 @@ To get the application up and running, follow these steps:
 
     ```
     PINECONE_API_KEY="your-pinecone-api-key"
-    PINECONE_ENVIRONMENT="your-pinecone-environment"
     ```
 
 5.  **Run the application:**
